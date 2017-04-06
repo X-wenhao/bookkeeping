@@ -25,8 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        bookkeeping.cpp
+        bookkeeping.cpp \
+    cost.cpp \
+    database.cpp
 
-HEADERS  += bookkeeping.h
+HEADERS  += bookkeeping.h \
+    cost.h \
+    database.h
 
-FORMS    += bookkeeping.ui
+FORMS    += bookkeeping.ui \
+    cost.ui

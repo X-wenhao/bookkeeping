@@ -15,6 +15,9 @@ public:
     explicit bookkeeping(QWidget *parent = 0);
     ~bookkeeping();
 
+private slots:
+    void on_editmoney_clicked();
+
 private:
     Ui::bookkeeping *ui;
 };
