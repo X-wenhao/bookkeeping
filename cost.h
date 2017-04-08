@@ -14,6 +14,7 @@ class cost : public QWidget
 public:
     explicit cost(QWidget *parent = 0);
     ~cost();
+    void setinfo(QString type,QString reason,QString money);
 
 private:
     Ui::cost *ui;
