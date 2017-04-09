@@ -13,13 +13,13 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="cost_icon">
+  <widget class="QLabel" name="cost_type">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>90</x>
      <y>0</y>
-     <width>72</width>
-     <height>15</height>
+     <width>51</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
@@ -29,10 +29,10 @@
   <widget class="QLabel" name="cost_reason">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>0</y>
-     <width>441</width>
-     <height>16</height>
+     <width>431</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
@@ -45,6 +45,19 @@
      <x>630</x>
      <y>0</y>
      <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cost_icon">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>51</width>
      <height>16</height>
     </rect>
    </property>

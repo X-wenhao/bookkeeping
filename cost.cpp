@@ -15,7 +15,7 @@ cost::~cost()
 
 void cost::setinfo(QString type,QString reason,QString money)
 {
-    ui->cost_icon->setText(type);
+    ui->cost_type->setText(type);
     ui->cost_reason->setText(reason);
     ui->cost_money->setText(money);
 }

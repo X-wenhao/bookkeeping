@@ -6,6 +6,7 @@ bookkeeping::bookkeeping(QWidget *parent) :
     ui(new Ui::bookkeeping)
 {
     ui->setupUi(this);
+    set_validator();
 
     //获取预算与用户名
     QSqlQuery query;
@@ -48,6 +49,19 @@ bookkeeping::bookkeeping(QWidget *parent) :
     ui->cob_year->setCurrentText(current_year);
     ui->cob_mon->setCurrentText(time.toString("M"));
 
+    //init page_write
+    ui->write_year->setText(current_year);
+    ui->write_month->setText(time.toString("M"));
+    ui->write_day->setText(time.toString(time.toString("d")));
+    ui->write_radio_income->setChecked(true);
+    ui->write_radio_out->setChecked(true);
+
+    //set group
+    write_type_group->addButton(ui->write_radio_income);
+    //write_type_group->addButton(ui->write_radio_outcome);
+
+
+
     init_widget_show_cost(0);
 
 }
@@ -68,7 +82,20 @@ void bookkeeping::on_editmoney_clicked()
 void bookkeeping::on_write_new_cost_clicked()
 {
     //ui->cost->setText(QString("12"));
-
+    if(ui->write_year->text().isEmpty()||ui->write_reason->toPlainText().isEmpty())
+    {
+        QMessageBox::critical(0,"Cannot submit!",
+                              "please complish!",QMessageBox::Cancel);
+    }
+    else
+    {
+        QString money=ui->write_money->text();
+        //if(write_type_group->checkedButton()->text()=="支出")
+        {
+            money="-"+money;
+            qDebug()<<money;
+        }
+    }
 }
 
 void bookkeeping::on_to_page_write_clicked()
@@ -104,7 +131,7 @@ void bookkeeping::init_widget_show_cost(int status)
         query.prepare("select * from cost where time=:time");
         query.bindValue(":time",query_time+QString::number(i,10));
         query.exec();
-        qDebug()<<query_time+QString::number(i,10);
+        //qDebug()<<query_time+QString::number(i,10);
         if(query.next())
         {
             cost_time *cost_time1=new cost_time(ui->widget_show_cost);
@@ -156,7 +183,7 @@ void bookkeeping::on_cob_year_currentTextChanged(const QString &arg1)
 void bookkeeping::on_cob_mon_currentTextChanged(const QString &arg1)
 {
     init_widget_show_cost(1);
-    qDebug()<<ui->cob_mon->currentText();
+    //qDebug()<<ui->cob_mon->currentText();
 }
 
 void bookkeeping::on_back_to_page_clicked()
@@ -171,3 +198,27 @@ void bookkeeping::set_validator()
     ui->showmoney->setValidator(validator_for_showmoney);
 
     //设置page_write
+    QIntValidator *validator_for_write_year=new QIntValidator(2000,2020,this);
+    ui->write_year->setValidator(validator_for_write_year);
+    QIntValidator *validator_for_write_month=new QIntValidator(1,12,this);
+    ui->write_month->setValidator(validator_for_write_month);
+    QIntValidator *validator_for_write_day=new QIntValidator(1,31,this);
+    ui->write_day->setValidator(validator_for_write_day);
+    QIntValidator *validator_for_write_money=new QIntValidator(0,10000000,this);
+    ui->write_money->setValidator(validator_for_write_money);
+}
+
+
+void bookkeeping::on_write_month_editingFinished()
+{
+    if(ui->write_month->text().isEmpty())
+    {
+        QIntValidator *validator_for_write_day=new QIntValidator(1,31,this);
+        ui->write_day->setValidator(validator_for_write_day);
+    }
+    else
+    {
+        QIntValidator *validator_for_write_day=new QIntValidator(1,31,this);
+        ui->write_day->setValidator(validator_for_write_day);
+    }
+}

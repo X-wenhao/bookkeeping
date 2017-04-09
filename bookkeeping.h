@@ -6,6 +6,8 @@
 #include <QIntValidator>
 #include "cost.h"
 #include "cost_time.h"
+#include <QMessageBox>
+#include <QButtonGroup>
 
 namespace Ui {
 class bookkeeping;
@@ -32,8 +34,13 @@ private slots:
 
     void on_back_to_page_clicked();
 
+    void on_write_month_editingFinished();
+
 private:
     Ui::bookkeeping *ui;
+    QButtonGroup *write_type_group;
+    //QButtonGroup *write_kind_group;
+
     void set_validator();
     void init_widget_show_cost(int status);
 };
