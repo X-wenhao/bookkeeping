@@ -49,6 +49,9 @@ bookkeeping::bookkeeping(QWidget *parent) :
     ui->cob_year->setCurrentText(current_year);
     ui->cob_mon->setCurrentText(time.toString("M"));
 
+    //设置滚动
+    ui->scrollArea->setWidget(ui->widget_show_cost);
+
     //init page_write
     ui->write_year->setText(current_year);
     ui->write_month->setText(time.toString("M"));
@@ -56,12 +59,7 @@ bookkeeping::bookkeeping(QWidget *parent) :
     ui->write_radio_income->setChecked(true);
     ui->write_radio_out->setChecked(true);
 
-    //set group
-    write_type_group->addButton(ui->write_radio_income);
-    //write_type_group->addButton(ui->write_radio_outcome);
-
-
-
+    init_button_group();
     init_widget_show_cost(0);
 
 }
@@ -89,12 +87,32 @@ void bookkeeping::on_write_new_cost_clicked()
     }
     else
     {
-        QString money=ui->write_money->text();
-        //if(write_type_group->checkedButton()->text()=="支出")
+        int money=ui->write_money->text().toInt();
+        if(write_type_group.checkedButton()->text()=="支出")
         {
-            money="-"+money;
+            money=-money;
             qDebug()<<money;
         }
+        QString kind=write_kind_group.checkedButton()->text();
+        QString time=ui->write_year->text()+"-"
+                +ui->write_month->text()+"-"
+                +ui->write_day->text();
+        QString reason=ui->write_reason->toPlainText();
+        QSqlQuery query;
+        query.prepare("insert into cost(type,money,reason,time)"
+                      "values(:type,:money,:reason,:time)");
+        query.bindValue(":type",kind);
+        query.bindValue(":money",money);
+        query.bindValue(":reason",reason);
+        query.bindValue(":time",time);
+        query.exec();
+
+        ui->write_money->clear();
+        ui->write_reason->clear();
+        ui->write_radio_income->setChecked(true);
+        ui->write_radio_out->setChecked(true);
+
+        QMessageBox::information(NULL,"Infrmation","Submit successfully");
     }
 }
 
@@ -189,6 +207,7 @@ void bookkeeping::on_cob_mon_currentTextChanged(const QString &arg1)
 void bookkeeping::on_back_to_page_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->page);
+    init_widget_show_cost(1);
 }
 
 void bookkeeping::set_validator()
@@ -221,4 +240,33 @@ void bookkeeping::on_write_month_editingFinished()
         QIntValidator *validator_for_write_day=new QIntValidator(1,31,this);
         ui->write_day->setValidator(validator_for_write_day);
     }
+}
+
+void bookkeeping::init_button_group()
+{
+    //set group
+    write_type_group.addButton(ui->write_radio_income);
+    write_type_group.addButton(ui->write_radio_outcome);
+
+    write_kind_group.addButton(ui->write_radio_out);
+    write_kind_group.addButton(ui->radioButton_4);
+    write_kind_group.addButton(ui->radioButton_5);
+    write_kind_group.addButton(ui->radioButton_6);
+    write_kind_group.addButton(ui->radioButton_7);
+    write_kind_group.addButton(ui->radioButton_8);
+    write_kind_group.addButton(ui->radioButton_9);
+    write_kind_group.addButton(ui->radioButton_10);
+    write_kind_group.addButton(ui->radioButton_11);
+    write_kind_group.addButton(ui->radioButton_12);
+    write_kind_group.addButton(ui->radioButton_13);
+    write_kind_group.addButton(ui->radioButton_14);
+    write_kind_group.addButton(ui->radioButton_15);
+    write_kind_group.addButton(ui->radioButton_16);
+    write_kind_group.addButton(ui->radioButton_17);
+    write_kind_group.addButton(ui->radioButton_18);
+    write_kind_group.addButton(ui->radioButton_19);
+    write_kind_group.addButton(ui->radioButton_20);
+    write_kind_group.addButton(ui->radioButton_21);
+    write_kind_group.addButton(ui->radioButton_22);
+    write_kind_group.addButton(ui->radioButton_23);
 }

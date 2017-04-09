@@ -35,6 +35,12 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>431</width>
+     <height>16777215</height>
+    </size>
+   </property>
    <property name="text">
     <string>TextLabel</string>
    </property>

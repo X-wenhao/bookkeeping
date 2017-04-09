@@ -38,11 +38,12 @@ private slots:
 
 private:
     Ui::bookkeeping *ui;
-    QButtonGroup *write_type_group;
-    //QButtonGroup *write_kind_group;
+    QButtonGroup write_type_group;
+    QButtonGroup write_kind_group;
 
     void set_validator();
     void init_widget_show_cost(int status);
+    void init_button_group();
 };
 
 #endif // BOOKKEEPING_H
