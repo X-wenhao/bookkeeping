@@ -106,6 +106,50 @@ void bookkeeping::on_write_new_cost_clicked()
         query.bindValue(":reason",reason);
         query.bindValue(":time",time);
         query.exec();
+        //update analyze
+        query.prepare("select * from analyze where time=:time");
+        query.bindValue("time",ui->write_year->text()+"-"+ui->write_month->text());
+        query.exec();
+        QSqlRecord record=query.record();
+
+        if(money<0)
+        {
+            query.prepare("update analyze set outcome=:money where time=:time");
+            query.bindValue(":money",money+record.value("outcome").toi);
+        }
+        else
+        {
+            query.prepare("update analyze set income=:money where time=:time");
+            query.bindValue(":money",money+record.value("income").toInt());
+        }
+        query.bindValue("time",ui->write_year->text()+"-"+ui->write_month->text());
+        query.exec();
+        if(money<0)
+        {
+            QString conp="other";
+            if(kind=="服装")
+            {
+                conp="clothe";
+            }
+            else if(kind=="餐饮"||kind=="酒水"||kind=="零食")
+            {
+                conp="food";
+            }
+            else if(kind=="出行"||kind=="旅行")
+            {
+                conp="out";
+            }
+            query.prepare("update analyze set "+conp+"=:money where time=:time");
+            query.bindValue(":money",money+record.value(conp).toInt());
+            query.bindValue("time",ui->write_year->text()+"-"+ui->write_month->text());
+            query.exec();
+        }
+
+        switch(kind)
+        {
+        default:
+            break;
+        }
 
         ui->write_money->clear();
         ui->write_reason->clear();
