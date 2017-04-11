@@ -8,6 +8,7 @@
 #include "cost_time.h"
 #include <QMessageBox>
 #include <QButtonGroup>
+#include "analyze.h"
 
 namespace Ui {
 class bookkeeping;
@@ -35,6 +36,8 @@ private slots:
     void on_back_to_page_clicked();
 
     void on_write_month_editingFinished();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::bookkeeping *ui;

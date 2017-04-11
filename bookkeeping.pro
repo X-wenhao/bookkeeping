@@ -28,13 +28,16 @@ SOURCES += main.cpp\
         bookkeeping.cpp \
     cost.cpp \
     database.cpp \
-    cost_time.cpp
+    cost_time.cpp \
+    analyze.cpp
 
 HEADERS  += bookkeeping.h \
     cost.h \
     database.h \
-    cost_time.h
+    cost_time.h \
+    analyze.h
 
 FORMS    += bookkeeping.ui \
     cost.ui \
-    cost_time.ui
+    cost_time.ui \
+    analyze.ui

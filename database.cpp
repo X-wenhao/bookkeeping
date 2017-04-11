@@ -15,6 +15,9 @@ bool createConnection(void)
     query.exec("create table user(id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar,password varchar, money float)");
 
     query.exec("create table cost(id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar, money float,reason varchar,time text)");
+
+    query.exec("create table analyze(id INTEGER PRIMARY KEY AUTOINCREMENT,time text,income float,outcome float,clothe float,food float,out float,other float)");
+
     return true;
 
 }

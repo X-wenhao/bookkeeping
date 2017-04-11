@@ -270,3 +270,11 @@ void bookkeeping::init_button_group()
     write_kind_group.addButton(ui->radioButton_22);
     write_kind_group.addButton(ui->radioButton_23);
 }
+
+void bookkeeping::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->hide();
+    analyze *page2=new analyze(ui->centralWidget);
+    page2->move(228,0);
+    page2->show();
+}
