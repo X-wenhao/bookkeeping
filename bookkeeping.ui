@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">background-color: rgb(4, 4, 4);</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
@@ -34,6 +34,9 @@
        <width>72</width>
        <height>15</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(235, 235, 235);</string>
      </property>
      <property name="text">
       <string>轻记账</string>
@@ -128,7 +131,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_5">

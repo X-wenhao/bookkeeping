@@ -2,6 +2,7 @@
 #define WISH_BOTTLE_H
 
 #include <QWidget>
+#include "database.h"
 
 namespace Ui {
 class wish_bottle;
