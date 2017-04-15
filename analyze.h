@@ -25,6 +25,7 @@ protected:
     void paintEvent(QPaintEvent *event);
 private slots:
     void on_two_month_currentTextChanged(const QString &arg1);
+    void on_two_exchange_status_clicked();
 };
 
 #endif // ANALYZE_H

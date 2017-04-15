@@ -64,12 +64,8 @@ void analyze::paintEvent(QPaintEvent *event)
 
     painter.setPen(QColor(0,160,230));
     painter.setRenderHint(QPainter::Antialiasing,true);
-    painter.drawLine(QPointF(x+20,y+height-60),QPointF(x+width-20,y+height-60));
-    // 设置字体：微软雅黑、点大小
-    QFont font;
-    font.setFamily("Microsoft YaHei");
-    font.setPointSize(20);
-    painter.setFont(font);
+    painter.drawLine(QPointF(x+20,y+height-60),QPointF(x+width-200,y+height-60));
+
     int j=1;
     if(ui->two_exchange_status->isChecked())
     {
@@ -77,7 +73,7 @@ void analyze::paintEvent(QPaintEvent *event)
     }
     for(int i=0;i<6;i++)
     {
-        painter.drawLine(QPointF(x+10+60*i,y+height-data_pre[i][j]/10-150),QPointF(x+10+60*(i+1),y+height-data_pre[i+1][j]/10-150));
+        painter.drawLine(QPointF(x+10+60*i,y+height-data_pre[i][j]/10-150),QPointF(x-100+60*(i+1),y+height-data_pre[i+1][j]/10-30));
     }
 
     x=ui->two_widget_second->x();
@@ -184,6 +180,7 @@ void analyze::init_labels(int status)
 
         QLabel *temp1=new QLabel(ui->two_widget_first);
         QLabel *temp2=new QLabel(ui->two_widget_first);
+        QLabel *temp3=new QLabel(ui->two_widget_second);
 
         temp1->setText(QString::number(data_pre[i][j],10));
         temp1->move(10+60*i,height-data_pre[i][j]/20-150);
@@ -197,6 +194,19 @@ void analyze::init_labels(int status)
         temp2->setText(QString::number(month,10));
         temp2->move(10+60*i,height-35);
         temp2->show();
+
+        x=ui->two_widget_second->x();
+        y=ui->two_widget_second->y();
+        height=ui->two_widget_second->height();
+        temp3->setText(QString::number(month,10));
+        temp3->move(x+200+60*i,y+height-40);
+        //temp3->show();
     }
 
+}
+
+void analyze::on_two_exchange_status_clicked()
+{
+    update();
+    init_labels(1);
 }
