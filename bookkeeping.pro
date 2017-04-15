@@ -29,15 +29,20 @@ SOURCES += main.cpp\
     cost.cpp \
     database.cpp \
     cost_time.cpp \
-    analyze.cpp
+    analyze.cpp \
+    wish_bottle.cpp
 
 HEADERS  += bookkeeping.h \
     cost.h \
     database.h \
     cost_time.h \
-    analyze.h
+    analyze.h \
+    wish_bottle.h
 
 FORMS    += bookkeeping.ui \
     cost.ui \
     cost_time.ui \
-    analyze.ui
+    analyze.ui \
+    wish_bottle.ui
+
+RESOURCES +=

@@ -59,6 +59,10 @@ bookkeeping::bookkeeping(QWidget *parent) :
     ui->write_radio_income->setChecked(true);
     ui->write_radio_out->setChecked(true);
 
+    //register page_3 and page_4
+    page_2=new analyze(ui->centralWidget);
+    page_2->hide();
+
     init_button_group();
     init_widget_show_cost(0);
 
@@ -71,9 +75,25 @@ bookkeeping::~bookkeeping()
 void bookkeeping::on_editmoney_clicked()
 {
     QSqlQuery query;
-    query.prepare("update user set money=:money where id=1");
-    query.bindValue(":money",ui->showmoney->text().toInt());
+    query.prepare("select * from analyze where time=:time");
+    QString time=ui->cob_year->currentText()+"-"+ui->cob_year->currentText();
+    query.bindValue(":time",time);
     query.exec();
+    if(query.next())
+    {
+        query.prepare("update analyze set budget=:budget where time=:time");
+        query.bindValue(":budget",ui->editmoney->text().toInt());
+        query.bindValue(":time",time);
+        query.exec();
+    }
+    else
+    {
+        query.prepare("insert into analyze(time,income,outcome,clothe,food ,out,other,budget)"
+                      "values(:time,0,0,0,0,0,0,:budget)");
+        query.bindValue(":budget",ui->editmoney->text().toInt());
+        query.bindValue(":time",time);
+        query.exec();
+    }
 }
 
 
@@ -108,21 +128,34 @@ void bookkeeping::on_write_new_cost_clicked()
         query.exec();
         //update analyze
         query.prepare("select * from analyze where time=:time");
-        query.bindValue("time",ui->write_year->text()+"-"+ui->write_month->text());
+        query.bindValue(":time",ui->write_year->text()+"-"+ui->write_month->text());
         query.exec();
+        if(query.next())
+        {
+            query.prepare("insert into analyze(time,income,outcome,clothe,food ,out,other,budget)"
+                          "values(:time,0,0,0,0,0,0,:budget)");
+            query.bindValue(":budget",ui->editmoney->text().toInt());
+            query.bindValue(":time",ui->write_year->text()+"-"+ui->write_month->text());
+            query.exec();
+            query.prepare("select * from analyze where time=:time");
+            query.bindValue(":time",ui->write_year->text()+"-"+ui->write_month->text());
+            query.exec();
+            query.next();
+        }
         QSqlRecord record=query.record();
 
         if(money<0)
         {
             query.prepare("update analyze set outcome=:money where time=:time");
-            query.bindValue(":money",money+record.value("outcome").toi);
+            query.bindValue(":money",money+record.value("outcome").toInt());
         }
         else
         {
             query.prepare("update analyze set income=:money where time=:time");
             query.bindValue(":money",money+record.value("income").toInt());
         }
-        query.bindValue("time",ui->write_year->text()+"-"+ui->write_month->text());
+        query.bindValue(":time",ui->write_year->text()+"-"+ui->write_month->text());
+        qDebug()<<ui->write_year->text()+"-"+ui->write_month->text()<<"金额"<<money+record.value("outcome").toInt();
         query.exec();
         if(money<0)
         {
@@ -141,14 +174,8 @@ void bookkeeping::on_write_new_cost_clicked()
             }
             query.prepare("update analyze set "+conp+"=:money where time=:time");
             query.bindValue(":money",money+record.value(conp).toInt());
-            query.bindValue("time",ui->write_year->text()+"-"+ui->write_month->text());
+            query.bindValue(":time",ui->write_year->text()+"-"+ui->write_month->text());
             query.exec();
-        }
-
-        switch(kind)
-        {
-        default:
-            break;
         }
 
         ui->write_money->clear();
@@ -318,7 +345,18 @@ void bookkeeping::init_button_group()
 void bookkeeping::on_pushButton_2_clicked()
 {
     ui->stackedWidget->hide();
-    analyze *page2=new analyze(ui->centralWidget);
-    page2->move(228,0);
-    page2->show();
+    page_2->move(228,0);
+    page_2->show();
+
+}
+
+void bookkeeping::on_pushButton_clicked()
+{
+    page_2->hide();
+    ui->stackedWidget->show();
+}
+
+void bookkeeping::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
 }

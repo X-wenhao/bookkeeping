@@ -59,7 +59,6 @@ void analyze::paintEvent(QPaintEvent *event)
     //first
     int x=ui->two_widget_first->x();
     int y=ui->two_widget_first->y();
-    qDebug()<<x<<endl<<y;
     int height=ui->two_widget_first->height();
     int width=ui->two_widget_first->width();
 
@@ -81,8 +80,48 @@ void analyze::paintEvent(QPaintEvent *event)
         painter.drawLine(QPointF(x+10+60*i,y+height-data_pre[i][j]/10-150),QPointF(x+10+60*(i+1),y+height-data_pre[i+1][j]/10-150));
     }
 
+    x=ui->two_widget_second->x();
+    y=ui->two_widget_second->y();
+    height=ui->two_widget_second->height();
+    width=ui->two_widget_second->width();
 
+    QColor color[4];
+    color[0]=QColor(132,197,235);
+    color[1]=QColor(93,171,233);
+    color[2]=QColor(165,208,238);
+    color[3]=QColor(45,135,200);
 
+    if(data_pre[6][1]!=0)
+    {
+        for(int i=1;i<5;i++)
+        {
+            painter.setPen(color[i-1]);
+            painter.setBrush(color[i-1]);
+            int begin=0;
+            if(i!=1)
+            {
+                begin=360*16*data_pre[6][i]/data_pre[6][1];
+                qDebug()<<begin;
+            }
+            painter.drawPie(x,y+30,150,150,begin,360*16*data_pre[6][i+1]/data_pre[6][1]);
+            painter.drawPie(180,y+40*i,20,20,0,360*16);
+        }
+    }
+    for(int i=6;i>=0;i--)
+    {
+        if(data_pre[i][1]!=0)
+        {
+            int begin=y+height-100;
+            for(int j=1;j<5;j++)
+            {
+                painter.setPen(color[j-1]);
+                painter.setBrush(color[j-1]);
+                begin-=data_pre[i][j+1]/2;
+
+                painter.drawRect(x+200+60*i,begin, 30,data_pre[i][j+1]/2 );
+            }
+        }
+    }
 }
 
 void analyze::on_two_month_currentTextChanged(const QString &arg1)
