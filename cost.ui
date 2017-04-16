@@ -6,69 +6,53 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>791</width>
-    <height>25</height>
+    <width>793</width>
+    <height>52</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/page/material/page/cost_bar.png);</string>
+  </property>
   <widget class="QLabel" name="cost_type">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>0</y>
-     <width>51</width>
-     <height>20</height>
+     <x>140</x>
+     <y>10</y>
+     <width>81</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="cost_reason">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>0</y>
-     <width>431</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>431</width>
-     <height>16777215</height>
-    </size>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
+    <string>type</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_money">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>0</y>
+     <x>640</x>
+     <y>10</y>
      <width>141</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>account</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_icon">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>0</y>
-     <width>51</width>
+     <x>20</x>
+     <y>10</y>
+     <width>31</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>icon</string>
    </property>
   </widget>
  </widget>
