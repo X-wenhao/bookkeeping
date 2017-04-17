@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/page">
         <file>material/page/cost_time.png</file>
-        <file>material/page/收入（元）(885.72,176.57.png</file>
+        <file>收入</file>
         <file>material/page/支出（元）(605.97,176.29).png</file>
         <file>material/page/cost_bar.png</file>
         <file>material/page/头像.png</file>
@@ -13,6 +13,13 @@
         <file>material/page/心愿瓶.png</file>
         <file>material/page/用户名（113.39，218.02）.png</file>
         <file>material/page/date.png</file>
+        <file>material/page/报表.png</file>
+        <file>material/page/矩形 1（114，384）.png</file>
+        <file>material/page/日历底.png</file>
+        <file>material/page/笔(982.5,74.5).png</file>
+        <file>material/page/账本.png</file>
+        <file>material/page/横幅1(580.5,64.5).png</file>
+        <file>material/page/横幅外.png</file>
     </qresource>
     <qresource prefix="/wish_bottle">
         <file>material/心愿/瓶子.png</file>
