@@ -16,27 +16,33 @@
   <widget class="QLabel" name="two_icon_first">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
+     <x>60</x>
+     <y>10</y>
      <width>51</width>
-     <height>21</height>
+     <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/前标1.png);</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>30</y>
-     <width>72</width>
-     <height>15</height>
+     <y>20</y>
+     <width>131</width>
+     <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/月度对比图 .png);</string>
+   </property>
    <property name="text">
-    <string>月度对比图</string>
+    <string/>
    </property>
   </widget>
   <widget class="QFrame" name="frame">
@@ -84,47 +90,59 @@
   <widget class="QWidget" name="two_widget_first" native="true">
    <property name="geometry">
     <rect>
-     <x>-10</x>
-     <y>90</y>
-     <width>641</width>
-     <height>281</height>
+     <x>100</x>
+     <y>260</y>
+     <width>601</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/月度对比图修改.png);</string>
    </property>
   </widget>
   <widget class="QWidget" name="two_widget_second" native="true">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>410</y>
-     <width>651</width>
-     <height>321</height>
+     <x>50</x>
+     <y>430</y>
+     <width>671</width>
+     <height>251</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/饼状图修改.png);</string>
    </property>
   </widget>
   <widget class="QLabel" name="two_icon_second">
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>380</y>
+     <y>350</y>
      <width>51</width>
-     <height>21</height>
+     <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/前标1.png);</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>380</y>
-     <width>72</width>
-     <height>15</height>
+     <x>140</x>
+     <y>370</y>
+     <width>131</width>
+     <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/收支分析图 .png);</string>
+   </property>
    <property name="text">
-    <string>收支分析图</string>
+    <string/>
    </property>
   </widget>
   <widget class="QComboBox" name="two_year">
@@ -140,11 +158,53 @@
   <widget class="QComboBox" name="two_month">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>60</y>
-     <width>87</width>
-     <height>22</height>
+     <x>120</x>
+     <y>62</y>
+     <width>101</width>
+     <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_first" native="true">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>90</y>
+     <width>601</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/折线.png);</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="blackground_first" native="true">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>80</y>
+     <width>641</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/背景1.png);</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="blackground_second" native="true">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>410</y>
+     <width>711</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/wish_bottle/material/支出/背景1.png);</string>
    </property>
   </widget>
   <action name="actiontwo_exchange_status">

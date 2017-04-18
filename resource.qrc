@@ -16,5 +16,25 @@
     </qresource>
     <qresource prefix="/wish_bottle">
         <file>material/心愿/瓶子.png</file>
+        <file>material/心愿/改动.png</file>
+        <file>material/心愿/加号.png</file>
+        <file>material/心愿/100%.png</file>
+        <file>material/心愿/0%.png</file>
+        <file>material/心愿/分隔1.png</file>
+        <file>material/心愿/进度1.png</file>
+        <file>material/心愿/进度2.png</file>
+        <file>material/心愿/进度3.png</file>
+        <file>material/心愿/添加心愿.png</file>
+        <file>material/心愿/我的心愿.png</file>
+        <file>material/心愿/心愿1.png</file>
+        <file>material/支出/背景1.png</file>
+        <file>material/支出/饼状图修改.png</file>
+        <file>material/支出/前标1.png</file>
+        <file>material/支出/切换收入状态 .png</file>
+        <file>material/支出/收支分析图 .png</file>
+        <file>material/支出/月度对比图 .png</file>
+        <file>material/支出/月度对比图修改.png</file>
+        <file>material/支出/折线.png</file>
+        <file>material/支出/02_2017.png</file>
     </qresource>
 </RCC>
