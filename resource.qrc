@@ -20,6 +20,7 @@
         <file>material/page/账本.png</file>
         <file>material/page/横幅1(580.5,64.5).png</file>
         <file>material/page/横幅外.png</file>
+        <file>material/page/记一笔.png</file>
     </qresource>
     <qresource prefix="/wish_bottle">
         <file>material/心愿/瓶子.png</file>
