@@ -73,7 +73,7 @@ void analyze::paintEvent(QPaintEvent *event)
     }
     for(int i=0;i<6;i++)
     {
-        painter.drawLine(QPointF(x+10+60*i,y+height-data_pre[i][j]/10-150),QPointF(x-100+60*(i+1),y+height-data_pre[i+1][j]/10-30));
+        painter.drawLine(QPointF(x+10+60*i,y+height-data_pre[i][j]/10-150),QPointF(x+10+60*(i+1),y+height-data_pre[i+1][j]/10-150));
     }
 
     x=ui->two_widget_second->x();
@@ -173,6 +173,13 @@ void analyze::init_labels(int status)
         {
             delete items[i];
         }
+
+        items=ui->two_widget_second->children();
+        num=items.count();
+        for(int i=0;i<num;i++)
+        {
+            delete items[i];
+        }
     }
 
     for(int i=0;i<7;i++)
@@ -180,10 +187,10 @@ void analyze::init_labels(int status)
 
         QLabel *temp1=new QLabel(ui->two_widget_first);
         QLabel *temp2=new QLabel(ui->two_widget_first);
-        QLabel *temp3=new QLabel(ui->two_widget_second);
+
 
         temp1->setText(QString::number(data_pre[i][j],10));
-        temp1->move(10+60*i,height-data_pre[i][j]/20-150);
+        temp1->move(10+60*i,height-data_pre[i][j]/10-150);
         temp1->show();
 
         int month=ui->two_month->currentText().toInt()-6+i;
@@ -194,13 +201,23 @@ void analyze::init_labels(int status)
         temp2->setText(QString::number(month,10));
         temp2->move(10+60*i,height-35);
         temp2->show();
+    }
 
+    for(int i=0;i<7;i++)
+    {
+        QLabel *temp3=new QLabel(ui->two_widget_second);
         x=ui->two_widget_second->x();
         y=ui->two_widget_second->y();
         height=ui->two_widget_second->height();
+
+        int month=ui->two_month->currentText().toInt()-6+i;
+        if(month<=0)
+        {
+            month+=12;
+        }
         temp3->setText(QString::number(month,10));
-        temp3->move(x+200+60*i,y+height-40);
-        //temp3->show();
+        temp3->move(220+60*i,height-80);
+        temp3->show();
     }
 
 }
