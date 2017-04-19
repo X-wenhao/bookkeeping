@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>793</width>
-    <height>52</height>
+    <height>58</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,40 +19,65 @@
   <widget class="QLabel" name="cost_type">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>10</y>
-     <width>81</width>
-     <height>16</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/page/material/主页/出 行.png);</string>
+   </property>
    <property name="text">
-    <string>type</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="cost_money">
    <property name="geometry">
     <rect>
-     <x>640</x>
+     <x>620</x>
      <y>10</y>
-     <width>141</width>
-     <height>16</height>
+     <width>161</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/page/material/主页/支出10.0.png);</string>
+   </property>
    <property name="text">
-    <string>account</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="cost_icon">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>31</width>
-     <height>16</height>
+     <x>30</x>
+     <y>0</y>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/page/material/主页/椭圆 2 拷贝 7(287.5,707.0).png);</string>
+   </property>
    <property name="text">
-    <string>icon</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cost_icon_background">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/page/material/主页/图层 49.png);</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
