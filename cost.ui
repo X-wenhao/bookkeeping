@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>58</height>
+    <width>795</width>
+    <height>50</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,15 +21,15 @@
     <rect>
      <x>150</x>
      <y>10</y>
-     <width>91</width>
-     <height>31</height>
+     <width>75</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/page/material/主页/出 行.png);</string>
+    <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
    </property>
    <property name="text">
-    <string/>
+    <string>type</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_money">
@@ -37,44 +37,29 @@
     <rect>
      <x>620</x>
      <y>10</y>
-     <width>161</width>
-     <height>31</height>
+     <width>160</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/page/material/主页/支出10.0.png);</string>
+    <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;
+</string>
    </property>
    <property name="text">
-    <string/>
+    <string>支出</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_icon">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>0</y>
-     <width>51</width>
-     <height>51</height>
+     <y>5</y>
+     <width>34</width>
+     <height>34</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/page/material/主页/椭圆 2 拷贝 7(287.5,707.0).png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="cost_icon_background">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>10</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/page/material/主页/图层 49.png);</string>
+    <string notr="true">background-image: url(:/cost_icon/material/小图标/社交.png);</string>
    </property>
    <property name="text">
     <string/>

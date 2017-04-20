@@ -30,6 +30,7 @@
         <file>material/主页/支出10.0.png</file>
         <file>material/主页/修改1.png</file>
         <file>material/主页/修改2.png</file>
+        <file>material/支出/图层 1.png</file>
     </qresource>
     <qresource prefix="/wish_bottle">
         <file>material/心愿/瓶子.png</file>
@@ -53,5 +54,33 @@
         <file>material/支出/月度对比图修改.png</file>
         <file>material/支出/折线.png</file>
         <file>material/支出/02_2017.png</file>
+    </qresource>
+    <qresource prefix="/cost_icon">
+        <file>material/小图标/办公.png</file>
+        <file>material/小图标/彩票.png</file>
+        <file>material/小图标/餐饮.png</file>
+        <file>material/小图标/出行.png</file>
+        <file>material/小图标/电话.png</file>
+        <file>material/小图标/服装.png</file>
+        <file>material/小图标/购物.png</file>
+        <file>material/小图标/健身.png</file>
+        <file>material/小图标/酒水.png</file>
+        <file>material/小图标/居家.png</file>
+        <file>material/小图标/捐赠.png</file>
+        <file>material/小图标/礼物.png</file>
+        <file>material/小图标/理财.png</file>
+        <file>material/小图标/零食.png</file>
+        <file>material/小图标/旅行.png</file>
+        <file>material/小图标/其他.png</file>
+        <file>material/小图标/社交.png</file>
+        <file>material/小图标/数码.png</file>
+        <file>material/小图标/学习.png</file>
+        <file>material/小图标/医疗.png</file>
+        <file>material/小图标/游戏.png</file>
+    </qresource>
+    <qresource prefix="/WishBottle">
+        <file>material/wish_bottle/待存储.png</file>
+        <file>material/wish_bottle/瓶子.png</file>
+        <file>material/wish_bottle/stars.png</file>
     </qresource>
 </RCC>

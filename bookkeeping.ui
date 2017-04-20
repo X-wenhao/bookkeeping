@@ -263,6 +263,9 @@
           <height>16</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+        </property>
         <property name="text">
          <string>年</string>
         </property>
@@ -295,6 +298,9 @@
           <width>31</width>
           <height>16</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
         </property>
         <property name="text">
          <string>月</string>
@@ -343,6 +349,9 @@
           <width>31</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
         </property>
         <property name="text">
          <string>1000</string>
@@ -407,6 +416,9 @@
           <width>21</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
         </property>
         <property name="text">
          <string>200</string>

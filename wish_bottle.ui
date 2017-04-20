@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>211</width>
-     <height>391</height>
+     <width>210</width>
+     <height>390</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -32,42 +32,58 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>280</y>
-      <width>51</width>
-      <height>31</height>
+      <y>300</y>
+      <width>50</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/wish_bottle/material/心愿/100%.png);</string>
+     <string notr="true">font: 22pt &quot;FZYiHei-M20S&quot;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>100%</string>
     </property>
    </widget>
    <widget class="QWidget" name="widget_1" native="true">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>0</y>
-      <width>171</width>
-      <height>241</height>
+      <y>5</y>
+      <width>170</width>
+      <height>255</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/wish_bottle/material/心愿/改动.png);</string>
+     <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);</string>
     </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>170</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/stars.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="wish_1_fill">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>250</y>
-      <width>91</width>
-      <height>91</height>
+      <y>270</y>
+      <width>90</width>
+      <height>90</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/wish_bottle/material/心愿/进度1.png);</string>
+     <string notr="true">border-image: url(:/wish_bottle/material/心愿/进度2.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -79,8 +95,8 @@
     <rect>
      <x>10</x>
      <y>400</y>
-     <width>211</width>
-     <height>281</height>
+     <width>210</width>
+     <height>280</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -97,8 +113,8 @@
      <rect>
       <x>60</x>
       <y>20</y>
-      <width>91</width>
-      <height>21</height>
+      <width>90</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -108,14 +124,37 @@
      <string/>
     </property>
    </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>170</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;FZYiHei-M20S&quot;;
+border-image: null;
+background-color: rgb(
+240,241,242);</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'FZYiHei-M20S'; font-size:20pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;小可爱留下了一个没有小姐姐的文本框。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QFrame" name="wish_2_content">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>280</x>
      <y>400</y>
-     <width>211</width>
-     <height>281</height>
+     <width>210</width>
+     <height>280</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -132,8 +171,8 @@
      <rect>
       <x>60</x>
       <y>20</y>
-      <width>91</width>
-      <height>21</height>
+      <width>90</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -143,14 +182,30 @@
      <string/>
     </property>
    </widget>
+   <widget class="QTextBrowser" name="textBrowser_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>170</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;FZYiHei-M20S&quot;;
+border-image: null;
+background-color: rgb(
+240,241,242);</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QFrame" name="wish_2">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>0</y>
-     <width>211</width>
-     <height>401</height>
+     <x>280</x>
+     <y>10</y>
+     <width>210</width>
+     <height>390</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -162,39 +217,39 @@
    <widget class="QLabel" name="wish_2_percent">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>290</y>
-      <width>31</width>
-      <height>31</height>
+      <x>80</x>
+      <y>300</y>
+      <width>50</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/wish_bottle/material/心愿/0%.png);</string>
+     <string notr="true">font: 22pt &quot;FZYiHei-M20S&quot;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>100%</string>
     </property>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
-      <width>171</width>
-      <height>241</height>
+      <y>5</y>
+      <width>170</width>
+      <height>255</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/wish_bottle/material/心愿/改动.png);</string>
+     <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);</string>
     </property>
    </widget>
    <widget class="QLabel" name="wish_2_fill">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>260</y>
-      <width>91</width>
-      <height>91</height>
+      <y>270</y>
+      <width>90</width>
+      <height>90</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -208,10 +263,10 @@
   <widget class="QFrame" name="wish_3">
    <property name="geometry">
     <rect>
-     <x>541</x>
-     <y>1</y>
-     <width>211</width>
-     <height>401</height>
+     <x>550</x>
+     <y>10</y>
+     <width>210</width>
+     <height>390</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -223,39 +278,39 @@
    <widget class="QLabel" name="wish_3_percent">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>290</y>
-      <width>31</width>
-      <height>31</height>
+      <x>80</x>
+      <y>300</y>
+      <width>50</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/wish_bottle/material/心愿/0%.png);</string>
+     <string notr="true">font: 22pt &quot;FZYiHei-M20S&quot;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>0%</string>
     </property>
    </widget>
    <widget class="QWidget" name="widget_3" native="true">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
-      <width>161</width>
-      <height>241</height>
+      <y>5</y>
+      <width>170</width>
+      <height>255</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/wish_bottle/material/心愿/改动.png);</string>
+     <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/待存储.png);</string>
     </property>
    </widget>
    <widget class="QLabel" name="wish_3_fill">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>260</y>
-      <width>91</width>
-      <height>91</height>
+      <y>270</y>
+      <width>90</width>
+      <height>90</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -269,10 +324,10 @@
   <widget class="QFrame" name="wish_3_content">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>550</x>
      <y>400</y>
-     <width>211</width>
-     <height>281</height>
+     <width>210</width>
+     <height>280</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -289,8 +344,8 @@
      <rect>
       <x>60</x>
       <y>20</y>
-      <width>101</width>
-      <height>21</height>
+      <width>90</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -298,6 +353,22 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>170</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;FZYiHei-M20S&quot;;
+border-image: null;
+background-color: rgb(
+240,241,242);</string>
     </property>
    </widget>
   </widget>

@@ -13,36 +13,40 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(240,241,242);</string>
+  </property>
   <widget class="QLabel" name="costtime_month">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>0</y>
+     <y>2</y>
      <width>151</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/page/material/主页/修改2.png);</string>
+    <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
    </property>
    <property name="text">
-    <string/>
+    <string>4月20日  星期</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_time_money">
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>0</y>
+     <y>2</y>
      <width>121</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/page/material/主页/修改1.png);</string>
+    <string notr="true">
+font: 13pt &quot;FZYiHei-M20S&quot;;</string>
    </property>
    <property name="text">
-    <string/>
+    <string>支出：XX</string>
    </property>
   </widget>
  </widget>
