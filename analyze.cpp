@@ -31,6 +31,8 @@ void analyze::paintEvent(QPaintEvent *event)
 {
     QSqlQuery query;
     int data_pre[7][6]={0};
+    int max_income=0;
+    int max_outcome=0;
     for(int i=6;i>=0;i--)
     {
         query.prepare("select * from analyze where time=:time");
@@ -50,8 +52,17 @@ void analyze::paintEvent(QPaintEvent *event)
 
             data_pre[i][4]=-query.record().value("out").toInt();
             data_pre[i][5]=-query.record().value("other").toInt();
-            qDebug()<<data_pre[i][1];
+            qDebug()<<i<<":"<<data_pre[i][1];
         }
+        if(max_income<data_pre[i][0])
+        {
+            max_income=data_pre[i][0];
+        }
+        if(max_outcome<data_pre[i][1])
+        {
+            max_outcome=data_pre[i][1];
+        }
+
     }
 
     QPainter painter(this);
@@ -64,16 +75,22 @@ void analyze::paintEvent(QPaintEvent *event)
 
     painter.setPen(QColor(0,160,230));
     painter.setRenderHint(QPainter::Antialiasing,true);
-    painter.drawLine(QPointF(x+20,y+height-60),QPointF(x+width-200,y+height-60));
+    painter.drawLine(QPointF(x+40,y+height-60),QPointF(x+width-200,y+height-60));
 
     int j=1;
+    int max=max_outcome;
     if(ui->two_exchange_status->isChecked())
     {
         j=0;
+        max=max_income;
     }
     for(int i=0;i<6;i++)
     {
-        painter.drawLine(QPointF(x+10+60*i,y+height-data_pre[i][j]/10-150),QPointF(x+10+60*(i+1),y+height-data_pre[i+1][j]/10-150));
+        painter.drawLine(QPointF(x+50+60*i,y+height-80-double(data_pre[i][j])/max*(height-100)),
+                         QPointF(x+50+60*(i+1),y+height-80-double(data_pre[i+1][j])/max*(height-100)));
+
+        qDebug()<<"point"<<y+height-80-data_pre[i+1][j]/max*(height-80);
+
     }
 
     x=ui->two_widget_second->x();
@@ -96,15 +113,17 @@ void analyze::paintEvent(QPaintEvent *event)
             int begin=0;
             if(i!=1)
             {
-                begin=360*16*data_pre[6][i]/data_pre[6][1];
+                begin=360*16*double(data_pre[6][i])/data_pre[6][1];
                 qDebug()<<begin;
             }
-            painter.drawPie(x,y+30,150,150,begin,360*16*data_pre[6][i+1]/data_pre[6][1]);
-            painter.drawPie(180,y+40*i,20,20,0,360*16);
+            painter.drawPie(90,y+30,150,150,begin,360*16*double(data_pre[6][i+1])/data_pre[6][1]);
+            painter.drawPie(30,y+40*i,20,20,0,360*16);
         }
     }
     for(int i=6;i>=0;i--)
     {
+        int total=data_pre[i][1]/max_outcome*(height-60);
+        qDebug()<<"total:"<<total;
         if(data_pre[i][1]!=0)
         {
             int begin=y+height-100;
@@ -112,9 +131,11 @@ void analyze::paintEvent(QPaintEvent *event)
             {
                 painter.setPen(color[j-1]);
                 painter.setBrush(color[j-1]);
-                begin-=data_pre[i][j+1]/2;
-
-                painter.drawRect(x+200+60*i,begin, 30,data_pre[i][j+1]/2 );
+                begin-=double(data_pre[i][j+1])/data_pre[i][1]*total;
+                qDebug()<<"up"<<data_pre[i][j+1];
+                qDebug()<<"begin:"<<begin;
+                qDebug()<<"dre:"<<data_pre[i][j+1]/data_pre[i][1]*total;
+                painter.drawRect(x+260+60*i,begin, 30,double(data_pre[i][j+1])/data_pre[i][1]*total);
             }
         }
     }
@@ -130,6 +151,8 @@ void analyze::init_labels(int status)
 {
     QSqlQuery query;
     int data_pre[7][6]={0};
+    int max_income=1;
+    int max_outcome=1;
     for(int i=6;i>=0;i--)
     {
         query.prepare("select * from analyze where time=:time");
@@ -149,21 +172,24 @@ void analyze::init_labels(int status)
 
             data_pre[i][4]=-query.record().value("out").toInt();
             data_pre[i][5]=-query.record().value("other").toInt();
-            qDebug()<<data_pre[i][1];
+            qDebug()<<data_pre[i][1]<<"true";
         }
+
+        if(max_income<data_pre[i][0])
+        {
+            max_income=data_pre[i][0];
+        }
+        if(max_outcome<data_pre[i][1])
+        {
+            max_outcome=data_pre[i][1];
+        }
+
     }
 
     int x=ui->two_widget_first->x();
     int y=ui->two_widget_first->y();
-    qDebug()<<x<<endl<<y;
     int height=ui->two_widget_first->height();
     int width=ui->two_widget_first->width();
-
-    int j=1;
-    if(ui->two_exchange_status->isChecked())
-    {
-        j=0;
-    }
 
     if(status)
     {
@@ -182,6 +208,15 @@ void analyze::init_labels(int status)
         }
     }
 
+    int j=1;
+    int max=max_outcome;
+    if(ui->two_exchange_status->isChecked())
+    {
+        j=0;
+        max=max_income;
+    }
+    qDebug()<<"max"<<max;
+
     for(int i=0;i<7;i++)
     {
 
@@ -190,7 +225,7 @@ void analyze::init_labels(int status)
 
 
         temp1->setText(QString::number(data_pre[i][j],10));
-        temp1->move(10+60*i,height-data_pre[i][j]/10-150);
+        temp1->move(50+60*i,height-80-data_pre[i][j]/max*(height-100));
         temp1->show();
 
         int month=ui->two_month->currentText().toInt()-6+i;
@@ -199,7 +234,7 @@ void analyze::init_labels(int status)
             month+=12;
         }
         temp2->setText(QString::number(month,10));
-        temp2->move(10+60*i,height-35);
+        temp2->move(50+60*i,height-55);
         temp2->show();
     }
 
@@ -216,8 +251,29 @@ void analyze::init_labels(int status)
             month+=12;
         }
         temp3->setText(QString::number(month,10));
-        temp3->move(220+60*i,height-80);
+        temp3->move(275+60*i,height-80);
         temp3->show();
+    }
+
+    for(int i=1;i<5;i++)
+    {
+        QLabel *temp=new QLabel(ui->two_widget_second);
+        QString content="衣";
+        switch(i)
+        {
+            case 2:
+                content="食";
+                break;
+            case 3:
+                content="住";
+                break;
+            case 4:
+                content="其他";
+                break;
+        }
+        temp->setText(content);
+        temp->move(55,40*i);
+        temp->show();
     }
 
 }

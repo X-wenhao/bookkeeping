@@ -16,7 +16,7 @@ bookkeeping::bookkeeping(QWidget *parent) :
     QString username=query.record().value("name").toString();
     qDebug()<<money;
     ui->showmoney->setText(QString::number(money,10));
-    ui->username->setText(username);
+    //ui->username->setText(username);
 
     //获取收入与支出
     query.exec("select * from cost");
@@ -115,8 +115,7 @@ void bookkeeping::on_write_new_cost_clicked()
         }
         QString kind=write_kind_group.checkedButton()->text();
         QString time=ui->write_year->text()+"-"
-                +ui->write_month->text()+"-"
-                +ui->write_day->text();
+                +ui->write_month->text();
         QString reason=ui->write_reason->toPlainText();
         QSqlQuery query;
         query.prepare("insert into cost(type,money,reason,time)"
@@ -124,13 +123,14 @@ void bookkeeping::on_write_new_cost_clicked()
         query.bindValue(":type",kind);
         query.bindValue(":money",money);
         query.bindValue(":reason",reason);
-        query.bindValue(":time",time);
+        query.bindValue(":time",time+"-"
+                        +ui->write_day->text());
         query.exec();
         //update analyze
         query.prepare("select * from analyze where time=:time");
         query.bindValue(":time",ui->write_year->text()+"-"+ui->write_month->text());
         query.exec();
-        if(query.next())
+        if(!query.next())
         {
             query.prepare("insert into analyze(time,income,outcome,clothe,food ,out,other,budget)"
                           "values(:time,0,0,0,0,0,0,:budget)");

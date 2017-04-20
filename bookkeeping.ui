@@ -19,7 +19,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>228</width>
+      <width>235</width>
       <height>768</height>
      </rect>
     </property>
@@ -29,10 +29,10 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>70</x>
        <y>50</y>
-       <width>72</width>
-       <height>15</height>
+       <width>94</width>
+       <height>27</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -45,27 +45,14 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>110</y>
-       <width>72</width>
-       <height>15</height>
+       <x>74</x>
+       <y>98</y>
+       <width>80</width>
+       <height>80</height>
       </rect>
      </property>
      <property name="text">
       <string>头像</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="username">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>170</y>
-       <width>72</width>
-       <height>15</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>用户名</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -84,10 +71,10 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>310</y>
-       <width>93</width>
-       <height>28</height>
+       <x>0</x>
+       <y>277</y>
+       <width>231</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="text">
@@ -131,16 +118,16 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>30</y>
-        <width>72</width>
-        <height>81</height>
+        <x>10</x>
+        <y>0</y>
+        <width>135</width>
+        <height>125</height>
        </rect>
       </property>
       <property name="text">
@@ -203,7 +190,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>110</y>
+        <y>140</y>
         <width>791</width>
         <height>91</height>
        </rect>
@@ -211,8 +198,8 @@
       <widget class="QFrame" name="frame">
        <property name="geometry">
         <rect>
-         <x>-1</x>
-         <y>-1</y>
+         <x>0</x>
+         <y>0</y>
          <width>251</width>
          <height>91</height>
         </rect>
@@ -239,8 +226,8 @@
        <widget class="QLabel" name="label_3">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>10</y>
+          <x>100</x>
+          <y>20</y>
           <width>41</width>
           <height>16</height>
          </rect>
@@ -252,8 +239,8 @@
        <widget class="QComboBox" name="cob_year">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
+          <x>20</x>
+          <y>20</y>
           <width>71</width>
           <height>22</height>
          </rect>
@@ -424,9 +411,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>200</y>
+        <y>230</y>
         <width>801</width>
-        <height>531</height>
+        <height>501</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -441,7 +428,7 @@
          <x>0</x>
          <y>0</y>
          <width>799</width>
-         <height>529</height>
+         <height>499</height>
         </rect>
        </property>
       </widget>
