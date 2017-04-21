@@ -6,69 +6,63 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>791</width>
-    <height>25</height>
+    <width>795</width>
+    <height>50</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/page/material/page/cost_bar.png);</string>
+  </property>
   <widget class="QLabel" name="cost_type">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>0</y>
-     <width>51</width>
-     <height>20</height>
+     <x>150</x>
+     <y>10</y>
+     <width>75</width>
+     <height>25</height>
     </rect>
    </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="cost_reason">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>0</y>
-     <width>431</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>431</width>
-     <height>16777215</height>
-    </size>
+   <property name="styleSheet">
+    <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>type</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_money">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>0</y>
-     <width>141</width>
-     <height>16</height>
+     <x>620</x>
+     <y>10</y>
+     <width>160</width>
+     <height>25</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;
+</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>支出</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_icon">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>0</y>
-     <width>51</width>
-     <height>16</height>
+     <x>30</x>
+     <y>5</y>
+     <width>34</width>
+     <height>34</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/cost_icon/material/小图标/社交.png);</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
  </widget>

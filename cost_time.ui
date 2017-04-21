@@ -6,50 +6,47 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>791</width>
+    <width>820</width>
     <height>25</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(240,241,242);</string>
+  </property>
   <widget class="QLabel" name="costtime_month">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>5</y>
-     <width>72</width>
-     <height>20</height>
+     <x>20</x>
+     <y>2</y>
+     <width>151</width>
+     <height>22</height>
     </rect>
    </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="cost_time_week">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>0</y>
-     <width>72</width>
-     <height>21</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>4月20日  星期</string>
    </property>
   </widget>
   <widget class="QLabel" name="cost_time_money">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>0</y>
+     <x>670</x>
+     <y>2</y>
      <width>121</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">
+font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>支出：XX</string>
    </property>
   </widget>
  </widget>
