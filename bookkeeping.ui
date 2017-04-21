@@ -88,13 +88,13 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>277</y>
-       <width>231</width>
-       <height>41</height>
+       <y>280</y>
+       <width>229</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/page/material/page/账本.png);</string>
+      <string notr="true">border-image: url(:/broad/material/board/我的账本-选中.jpg);</string>
      </property>
      <property name="text">
       <string/>
@@ -103,34 +103,36 @@
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>0</x>
        <y>350</y>
-       <width>131</width>
-       <height>31</height>
+       <width>229</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/page/material/page/报表.png);
+      <string notr="true">
+border-image: url(:/broad/material/board/分析报表-未选中.jpg);
 </string>
      </property>
      <property name="text">
-      <string>分析报表</string>
+      <string/>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>410</y>
-       <width>131</width>
-       <height>31</height>
+       <x>0</x>
+       <y>420</y>
+       <width>229</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/page/material/page/心愿瓶.png);</string>
+      <string notr="true">
+border-image: url(:/broad/material/board/心愿瓶-未选中.jpg);</string>
      </property>
      <property name="text">
-      <string>心愿瓶</string>
+      <string/>
      </property>
     </widget>
    </widget>

@@ -83,4 +83,12 @@
         <file>material/wish_bottle/瓶子.png</file>
         <file>material/wish_bottle/stars.png</file>
     </qresource>
+    <qresource prefix="/broad">
+        <file>material/board/分析报表-未选中.jpg</file>
+        <file>material/board/分析报表-选中.jpg</file>
+        <file>material/board/我的账本-未选中.jpg</file>
+        <file>material/board/我的账本-选中.jpg</file>
+        <file>material/board/心愿瓶-未选中.jpg</file>
+        <file>material/board/心愿瓶-选中.jpg</file>
+    </qresource>
 </RCC>
