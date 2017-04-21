@@ -3,8 +3,9 @@
 
 #include <QWidget>
 #include <QDateTime>
-#include <QPainter>
+
 #include "database.h"
+#include <QPainter>
 #include <QPaintEvent>
 namespace Ui {
 class analyze;

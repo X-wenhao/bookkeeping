@@ -165,14 +165,14 @@ void wish_bottle::set_info()
             qDebug()<<"money"<<money;
             if(money>surplus)
             {
-                int percent=int(double(surplus)/money*100);
-                label->setText(QString::number(percent,10)+"%");
+                double percent=double(surplus)/money;
+                label->setText(QString::number(int(percent*100),10)+"%");
                 browser->setPlainText(query.record().value("wish").toString());
                 surplus=0;
             }
             else
             {
-                int percent=int(double(surplus)/money*100);
+                int percent=double(surplus)/money;
                 label->setText(QString::number(percent,10)+"%");
                 browser->setPlainText(query.record().value("wish").toString());
                 surplus-=money;

@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(250, 254, 255);</string>
+   <string notr="true"/>
   </property>
   <widget class="QLabel" name="two_icon_first">
    <property name="geometry">

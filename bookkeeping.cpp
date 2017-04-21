@@ -7,15 +7,16 @@ bookkeeping::bookkeeping(QWidget *parent) :
 {
     ui->setupUi(this);
     set_validator();
+    //this->setWindowFlags(Qt::FramelessWindowHint);
 
-    //获取预算与用户名
+    //获取预算
     QSqlQuery query;
-    query.exec("select * from user");
-    query.next();
-    int money =query.record().value("money").toInt();
-    QString username=query.record().value("name").toString();
-    qDebug()<<money;
-    ui->showmoney->setText(QString::number(money,10));
+    //query.exec("select * from user");
+    //query.next();
+    //int money =query.record().value("money").toInt();
+    //QString username=query.record().value("name").toString();
+    //qDebug()<<money;
+    //ui->showmoney->setText(QString::number(money,10));
     //ui->username->setText(username);
 
     //获取收入与支出
@@ -59,12 +60,23 @@ bookkeeping::bookkeeping(QWidget *parent) :
     ui->write_radio_income->setChecked(true);
     ui->write_radio_out->setChecked(true);
 
-    //register page_3 and page_4
+    //register page_2 and page_3
     page_2=new analyze(ui->centralWidget);
     page_2->hide();
 
+    page_3=new wish_bottle(ui->centralWidget);
+    page_3->hide();
+
+    //set budget
+    query.prepare("select budget from analyze where time=:time");
+    query.bindValue(":time",ui->cob_year->currentText()+"-"+ui->cob_mon->currentText());
+    query.exec();
+    query.next();
+    ui->showmoney->setText(query.record().value("budget").toString());
+
     init_button_group();
     init_widget_show_cost(0);
+    ui->widget_show_cost->setStyleSheet("background-color: rgb(240, 241, 242)");
 
 }
 bookkeeping::~bookkeeping()
@@ -251,8 +263,6 @@ void bookkeeping::init_widget_show_cost(int status)
                     money="收入："+money+"元";
                 }
                 cost1->setinfo(type,reason,money);
-                cost1->move(0,y);
-                y+=cost1->height();
                 cost1->show();
             }while(query.next());
             QString month=ui->cob_mon->currentText()+"月"+QString::number(i,10)+"日";
@@ -344,7 +354,14 @@ void bookkeeping::init_button_group()
 
 void bookkeeping::on_pushButton_2_clicked()
 {
-    ui->stackedWidget->hide();
+    if(ui->stackedWidget->isVisibleTo(this))
+    {
+        ui->stackedWidget->hide();
+    }
+    if(page_3->isVisibleTo(this))
+    {
+        page_3->hide();
+    }
     page_2->move(228,0);
     page_2->show();
 
@@ -353,10 +370,16 @@ void bookkeeping::on_pushButton_2_clicked()
 void bookkeeping::on_pushButton_clicked()
 {
     page_2->hide();
+    page_3->hide();
+
     ui->stackedWidget->show();
 }
 
 void bookkeeping::on_pushButton_3_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->hide();
+    page_2->hide();
+
+    page_3->show();
+    page_3->move(228,0);
 }

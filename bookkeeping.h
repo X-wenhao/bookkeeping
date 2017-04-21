@@ -9,6 +9,7 @@
 #include <QMessageBox>
 #include <QButtonGroup>
 #include "analyze.h"
+#include "wish_bottle.h"
 
 namespace Ui {
 class bookkeeping;
@@ -48,6 +49,7 @@ private:
     QButtonGroup write_type_group;
     QButtonGroup write_kind_group;
     analyze *page_2;
+    wish_bottle *page_3;
 
     void set_validator();
     void init_widget_show_cost(int status);

@@ -16,6 +16,6 @@ cost_time::~cost_time()
 void cost_time::setinfo(QString month,QString week,QString money)
 {
     ui->costtime_month->setText(month);
-    ui->cost_time_week->setText(week);
+    //ui->cost_time_week->setText(week);
     ui->cost_time_money->setText(money);
 }

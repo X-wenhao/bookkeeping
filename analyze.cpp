@@ -29,6 +29,11 @@ analyze::~analyze()
 
 void analyze::paintEvent(QPaintEvent *event)
 {
+    QStyleOption opt;
+    opt.init(this);
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+
     QSqlQuery query;
     int data_pre[7][6]={0};
     int max_income=0;
@@ -272,7 +277,7 @@ void analyze::init_labels(int status)
                 break;
         }
         temp->setText(content);
-        temp->move(55,40*i);
+        temp->move(15,40*i);
         temp->show();
     }
 
