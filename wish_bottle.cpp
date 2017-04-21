@@ -143,7 +143,7 @@ void wish_bottle::set_info()
     {
         QLabel *label;
         QTextBrowser *browser;
-        QLabel *label_back;
+        QWidget *label_back;
         QLabel *label_in;
         switch(i)
         {
@@ -170,11 +170,12 @@ void wish_bottle::set_info()
         if(query.next())
         {
             int money=query.record().value("money").toInt();
-            qDebug()<<"money"<<money;
+            qDebug()<<"money123"<<money;
             if(money>surplus)
             {
                 int percent=int(double(surplus)/money*100);
                 label->setText(QString::number(percent,10)+"%");
+                label->raise();
                 browser->setPlainText(query.record().value("wish").toString());
 
                 label_back->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);");
@@ -184,9 +185,10 @@ void wish_bottle::set_info()
                 int y=label_in->y();
                 int width=label_in->width();
                 int height=label_in->height();
-                y-=(1-double(surplus)/money)*height;
+                y+=(1-double(surplus)/money)*height;
+                qDebug()<<y;
                 height*=double(surplus)/money;
-
+                qDebug()<<height;
                 label_in->setGeometry(x,y,height,width);
                 if(label_in->isHidden())
                 {
@@ -198,6 +200,7 @@ void wish_bottle::set_info()
             {
                 int percent=int(double(surplus)/money*100);
                 label->setText(QString::number(percent,10)+"%");
+                label->raise();
                 browser->setPlainText(query.record().value("wish").toString());
                 label_back->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);");
                 label_in->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/stars.png);"
@@ -215,7 +218,7 @@ void wish_bottle::set_info()
         {
             label->setText(" ");
 
-            label_back->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);");
+            label_back->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/待添加.png);");
             if(label_in->isVisible())
             {
                 label_in->hide();
@@ -228,4 +231,3 @@ wish_bottle::~wish_bottle()
 {
     delete ui;
 }
-v

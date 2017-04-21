@@ -44,10 +44,11 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 22pt &quot;FZYiHei-M20S&quot;</string>
+     <string notr="true">font: 22pt &quot;FZYiHei-M20S&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="text">
-     <string>100%</string>
+     <string>1111</string>
     </property>
    </widget>
    <widget class="QWidget" name="widget_1" native="true">
@@ -453,15 +454,6 @@ background-color: rgb(
     <string/>
    </property>
   </widget>
-  <zorder>wish_1</zorder>
-  <zorder>wish_1_content</zorder>
-  <zorder>wish_2_content</zorder>
-  <zorder>wish_2</zorder>
-  <zorder>wish_3</zorder>
-  <zorder>wish_3_content</zorder>
-  <zorder>add_wish</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>
