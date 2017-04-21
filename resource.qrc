@@ -31,6 +31,7 @@
         <file>material/主页/修改1.png</file>
         <file>material/主页/修改2.png</file>
         <file>material/支出/图层 1.png</file>
+        <file>material/page/横幅外(647.5.png</file>
     </qresource>
     <qresource prefix="/wish_bottle">
         <file>material/心愿/瓶子.png</file>
@@ -82,5 +83,13 @@
         <file>material/wish_bottle/待存储.png</file>
         <file>material/wish_bottle/瓶子.png</file>
         <file>material/wish_bottle/stars.png</file>
+    </qresource>
+    <qresource prefix="/border">
+        <file>material/board/分析报表-未选中.jpg</file>
+        <file>material/board/分析报表-选中.jpg</file>
+        <file>material/board/我的账本-未选中.jpg</file>
+        <file>material/board/我的账本-选中.jpg</file>
+        <file>material/board/心愿瓶-未选中.jpg</file>
+        <file>material/board/心愿瓶-选中.jpg</file>
     </qresource>
 </RCC>

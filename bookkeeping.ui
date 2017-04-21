@@ -30,7 +30,7 @@
      <property name="geometry">
       <rect>
        <x>70</x>
-       <y>50</y>
+       <y>120</y>
        <width>94</width>
        <height>27</height>
       </rect>
@@ -45,14 +45,15 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>74</x>
-       <y>98</y>
+       <x>80</x>
+       <y>180</y>
        <width>80</width>
        <height>80</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/page/material/page/头像.png);</string>
+      <string notr="true">
+</string>
      </property>
      <property name="text">
       <string/>
@@ -88,13 +89,13 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>277</y>
-       <width>231</width>
-       <height>41</height>
+       <y>280</y>
+       <width>229</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/page/material/page/账本.png);</string>
+      <string notr="true">border-image: url(:/border/material/board/我的账本-选中.jpg);</string>
      </property>
      <property name="text">
       <string/>
@@ -103,34 +104,33 @@
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>0</x>
        <y>350</y>
-       <width>131</width>
-       <height>31</height>
+       <width>229</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/page/material/page/报表.png);
-</string>
+      <string notr="true">border-image: url(:/border/material/board/分析报表-未选中.jpg);</string>
      </property>
      <property name="text">
-      <string>分析报表</string>
+      <string/>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>410</y>
-       <width>131</width>
-       <height>31</height>
+       <x>0</x>
+       <y>420</y>
+       <width>229</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/page/material/page/心愿瓶.png);</string>
+      <string notr="true">border-image: url(:/border/material/board/心愿瓶-未选中.jpg);</string>
      </property>
      <property name="text">
-      <string>心愿瓶</string>
+      <string/>
      </property>
     </widget>
    </widget>
@@ -170,10 +170,15 @@
       <property name="geometry">
        <rect>
         <x>650</x>
-        <y>10</y>
+        <y>20</y>
         <width>72</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 11pt &quot;微软雅黑&quot;;
+font: 75 11pt &quot;微软雅黑&quot;;
+color: rgb(85, 89, 91);</string>
       </property>
       <property name="text">
        <string>总预算：</string>
@@ -183,7 +188,7 @@
       <property name="geometry">
        <rect>
         <x>730</x>
-        <y>30</y>
+        <y>40</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -264,7 +269,7 @@
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+         <string notr="true">font: 75 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>年</string>
@@ -294,13 +299,13 @@
         <property name="geometry">
          <rect>
           <x>210</x>
-          <y>50</y>
+          <y>40</y>
           <width>31</width>
-          <height>16</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+         <string notr="true">font: 75 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>月</string>
@@ -346,12 +351,13 @@
          <rect>
           <x>120</x>
           <y>40</y>
-          <width>31</width>
+          <width>41</width>
           <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+         <string notr="true">font: 75 13pt &quot;微软雅黑&quot;;
+</string>
         </property>
         <property name="text">
          <string>1000</string>
@@ -413,12 +419,12 @@
          <rect>
           <x>120</x>
           <y>40</y>
-          <width>21</width>
+          <width>31</width>
           <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+         <string notr="true">font: 75 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>200</string>
@@ -443,10 +449,14 @@
       <property name="geometry">
        <rect>
         <x>650</x>
-        <y>40</y>
+        <y>50</y>
         <width>71</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 11pt &quot;微软雅黑&quot;;
+color: rgb(85, 89, 91);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="to_page_write">
@@ -496,11 +506,15 @@
      <widget class="QPushButton" name="write_new_cost">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>610</y>
+        <x>510</x>
+        <y>640</y>
         <width>93</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(76, 154, 212);
+font: 12pt &quot;幼圆&quot;;</string>
       </property>
       <property name="text">
        <string>提交</string>
@@ -515,6 +529,9 @@
         <height>71</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/圆角矩形 1.png);</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -525,10 +542,14 @@
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>30</y>
-         <width>41</width>
-         <height>16</height>
+         <y>20</y>
+         <width>51</width>
+         <height>21</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(150, 193, 223);
+font: 14pt &quot;幼圆&quot;;</string>
        </property>
        <property name="text">
         <string>日期：</string>
@@ -537,21 +558,28 @@
       <widget class="QLineEdit" name="write_year">
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>30</y>
+         <x>90</x>
+         <y>20</y>
          <width>51</width>
          <height>21</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/年.png);</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_11">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>30</y>
+         <x>160</x>
+         <y>20</y>
          <width>51</width>
-         <height>16</height>
+         <height>21</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;幼圆&quot;;
+color: rgb(191, 199, 203);</string>
        </property>
        <property name="text">
         <string>年</string>
@@ -560,21 +588,28 @@
       <widget class="QLineEdit" name="write_month">
        <property name="geometry">
         <rect>
-         <x>210</x>
-         <y>30</y>
+         <x>200</x>
+         <y>20</y>
          <width>41</width>
          <height>21</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/月.png);</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_13">
        <property name="geometry">
         <rect>
          <x>260</x>
-         <y>30</y>
+         <y>20</y>
          <width>41</width>
-         <height>16</height>
+         <height>21</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;幼圆&quot;;
+color: rgb(191, 199, 203);</string>
        </property>
        <property name="text">
         <string>月</string>
@@ -584,31 +619,46 @@
        <property name="geometry">
         <rect>
          <x>300</x>
-         <y>30</y>
+         <y>20</y>
          <width>41</width>
          <height>21</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/日.png);</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_14">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>30</y>
+         <x>360</x>
+         <y>20</y>
          <width>41</width>
-         <height>16</height>
+         <height>21</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;幼圆&quot;;
+color: rgb(191, 199, 203);</string>
        </property>
        <property name="text">
         <string>日</string>
        </property>
       </widget>
+      <zorder>label_9</zorder>
+      <zorder>write_year</zorder>
+      <zorder>label_11</zorder>
+      <zorder>write_month</zorder>
+      <zorder>label_13</zorder>
+      <zorder>write_day</zorder>
+      <zorder>label_14</zorder>
+      <zorder>line_5</zorder>
      </widget>
      <widget class="Line" name="line_5">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>60</y>
+        <x>60</x>
+        <y>110</y>
         <width>411</width>
         <height>20</height>
        </rect>
@@ -620,21 +670,24 @@
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>60</y>
+        <x>220</x>
+        <y>90</y>
         <width>72</width>
-        <height>31</height>
+        <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/收支类型 .png);</string>
+      </property>
       <property name="text">
-       <string>收支类型</string>
+       <string/>
       </property>
      </widget>
      <widget class="Line" name="line_6">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>130</y>
+        <x>60</x>
+        <y>180</y>
         <width>401</width>
         <height>20</height>
        </rect>
@@ -646,23 +699,26 @@
      <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>130</y>
+        <x>220</x>
+        <y>200</y>
         <width>72</width>
-        <height>31</height>
+        <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/账目类别.png);</string>
+      </property>
       <property name="text">
-       <string>账目类别</string>
+       <string/>
       </property>
      </widget>
      <widget class="QFrame" name="write_kind">
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>160</y>
+        <y>240</y>
         <width>601</width>
-        <height>141</height>
+        <height>221</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -677,11 +733,14 @@
          <x>10</x>
          <y>10</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/出行.png);</string>
+       </property>
        <property name="text">
-        <string>出行</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_4">
@@ -690,11 +749,14 @@
          <x>90</x>
          <y>10</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/服装.png);</string>
+       </property>
        <property name="text">
-        <string>服装</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_5">
@@ -703,11 +765,14 @@
          <x>170</x>
          <y>10</y>
          <width>51</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/礼物.png);</string>
+       </property>
        <property name="text">
-        <string>礼物</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_6">
@@ -716,11 +781,14 @@
          <x>250</x>
          <y>10</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/餐饮.png);</string>
+       </property>
        <property name="text">
-        <string>餐饮</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_7">
@@ -729,193 +797,238 @@
          <x>330</x>
          <y>10</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/电话.png);</string>
+       </property>
        <property name="text">
-        <string>话费</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_8">
        <property name="geometry">
         <rect>
-         <x>420</x>
+         <x>410</x>
          <y>10</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/购物.png);</string>
+       </property>
        <property name="text">
-        <string>购物</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_9">
        <property name="geometry">
         <rect>
          <x>250</x>
-         <y>60</y>
+         <y>80</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/医疗.png);</string>
+       </property>
        <property name="text">
-        <string>医疗</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_10">
        <property name="geometry">
         <rect>
          <x>330</x>
-         <y>60</y>
+         <y>80</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/彩票.png);</string>
+       </property>
        <property name="text">
-        <string>彩票</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_11">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>60</y>
+         <y>80</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/理财.png);</string>
+       </property>
        <property name="text">
-        <string>理财</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_12">
        <property name="geometry">
         <rect>
          <x>90</x>
-         <y>60</y>
+         <y>80</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/办公.png);</string>
+       </property>
        <property name="text">
-        <string>办公</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_13">
        <property name="geometry">
         <rect>
          <x>170</x>
-         <y>60</y>
+         <y>80</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/捐赠.png);</string>
+       </property>
        <property name="text">
-        <string>捐赠</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_14">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>60</y>
-         <width>51</width>
-         <height>19</height>
+         <x>410</x>
+         <y>80</y>
+         <width>61</width>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/数码.png);</string>
+       </property>
        <property name="text">
-        <string>数码</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_15">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>100</y>
+         <x>250</x>
+         <y>150</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/居家.png);</string>
+       </property>
        <property name="text">
-        <string>居家</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_16">
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>100</y>
+         <x>330</x>
+         <y>150</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/社交.png);</string>
+       </property>
        <property name="text">
-        <string>社交</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_17">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>100</y>
-         <width>71</width>
-         <height>19</height>
+         <x>10</x>
+         <y>150</y>
+         <width>61</width>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/零食.png);</string>
+       </property>
        <property name="text">
-        <string>零食</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_18">
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>100</y>
+         <x>90</x>
+         <y>150</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/学习.png);</string>
+       </property>
        <property name="text">
-        <string>学习</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_19">
        <property name="geometry">
         <rect>
-         <x>160</x>
-         <y>100</y>
+         <x>170</x>
+         <y>150</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/游戏.png);</string>
+       </property>
        <property name="text">
-        <string>游戏</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_20">
        <property name="geometry">
         <rect>
          <x>410</x>
-         <y>100</y>
+         <y>150</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/健身.png);</string>
+       </property>
        <property name="text">
-        <string>健身</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_21">
        <property name="geometry">
         <rect>
-         <x>480</x>
-         <y>100</y>
-         <width>71</width>
-         <height>19</height>
+         <x>490</x>
+         <y>150</y>
+         <width>61</width>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/其他.png);</string>
+       </property>
        <property name="text">
-        <string>其他</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_22">
@@ -924,33 +1037,396 @@
          <x>490</x>
          <y>10</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/酒水.png);</string>
+       </property>
        <property name="text">
-        <string>酒水</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="radioButton_23">
        <property name="geometry">
         <rect>
          <x>490</x>
-         <y>60</y>
+         <y>80</y>
          <width>61</width>
-         <height>19</height>
+         <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/cost_icon/material/小图标/旅行.png);</string>
+       </property>
        <property name="text">
-        <string>旅行</string>
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 出行</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>50</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 服装</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>50</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 礼物</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>50</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 餐饮</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>50</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 花费</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>50</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 购物</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>50</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 酒水</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 理财</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>120</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 办公</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>120</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 捐赠</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>120</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 医疗</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>120</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 彩票</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_30">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>120</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 数码</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_31">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>120</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 旅行</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>190</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 零食</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>190</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 学习</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>190</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 游戏</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_35">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>190</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 居家</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>190</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 社交</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_37">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>190</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 健身</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_38">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>190</y>
+         <width>54</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(76, 154, 212);
+font: 10pt &quot;幼圆&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 其他</string>
        </property>
       </widget>
      </widget>
      <widget class="Line" name="line_7">
       <property name="geometry">
        <rect>
-        <x>57</x>
-        <y>300</y>
-        <width>441</width>
+        <x>40</x>
+        <y>480</y>
+        <width>261</width>
         <height>20</height>
        </rect>
       </property>
@@ -961,32 +1437,38 @@
      <widget class="QLabel" name="label_17">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>300</y>
+        <x>120</x>
+        <y>480</y>
         <width>72</width>
-        <height>21</height>
+        <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/具体数目.png);</string>
+      </property>
       <property name="text">
-       <string>具体数目</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLineEdit" name="write_money">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>320</y>
-        <width>251</width>
-        <height>21</height>
+        <x>40</x>
+        <y>510</y>
+        <width>261</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/具体数目边框.png);</string>
       </property>
      </widget>
      <widget class="Line" name="line_8">
       <property name="geometry">
        <rect>
-        <x>57</x>
-        <y>370</y>
-        <width>281</width>
+        <x>40</x>
+        <y>550</y>
+        <width>261</width>
         <height>20</height>
        </rect>
       </property>
@@ -997,14 +1479,17 @@
      <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>370</y>
-        <width>72</width>
-        <height>15</height>
+        <x>140</x>
+        <y>550</y>
+        <width>31</width>
+        <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/备注.png);</string>
+      </property>
       <property name="text">
-       <string>备注</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="back_to_page">
@@ -1012,19 +1497,22 @@
        <rect>
         <x>660</x>
         <y>640</y>
-        <width>93</width>
-        <height>28</height>
+        <width>41</width>
+        <height>41</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/返回.png);</string>
+      </property>
       <property name="text">
-       <string>back</string>
+       <string/>
       </property>
      </widget>
      <widget class="QFrame" name="frame_4">
       <property name="geometry">
        <rect>
-        <x>69</x>
-        <y>90</y>
+        <x>60</x>
+        <y>140</y>
         <width>411</width>
         <height>31</height>
        </rect>
@@ -1039,37 +1527,50 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>10</y>
-         <width>115</width>
-         <height>19</height>
+         <y>-2</y>
+         <width>111</width>
+         <height>31</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/bookkeeping/material/bookkeeping/收入文字.png);</string>
+       </property>
        <property name="text">
-        <string>收入</string>
+        <string/>
        </property>
       </widget>
       <widget class="QRadioButton" name="write_radio_outcome">
        <property name="geometry">
         <rect>
-         <x>190</x>
-         <y>10</y>
-         <width>115</width>
-         <height>19</height>
+         <x>210</x>
+         <y>0</y>
+         <width>121</width>
+         <height>31</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/bookkeeping/material/bookkeeping/支出文字.png);</string>
+       </property>
        <property name="text">
-        <string>支出</string>
+        <string/>
        </property>
       </widget>
+      <zorder>write_radio_income</zorder>
+      <zorder>write_radio_outcome</zorder>
+      <zorder>line_5</zorder>
+      <zorder>label_15</zorder>
      </widget>
      <widget class="QTextEdit" name="write_reason">
       <property name="geometry">
        <rect>
-        <x>53</x>
-        <y>396</y>
+        <x>40</x>
+        <y>580</y>
         <width>281</width>
         <height>171</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/bookkeeping/material/bookkeeping/备注边框.png);</string>
       </property>
      </widget>
     </widget>

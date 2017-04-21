@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/bookkeeping">
+        <file>material/bookkeeping/备注.png</file>
+        <file>material/bookkeeping/备注边框.png</file>
+        <file>material/bookkeeping/背景阴影.png</file>
+        <file>material/bookkeeping/返回.png</file>
+        <file>material/bookkeeping/横幅内背景.png</file>
+        <file>material/bookkeeping/横幅外背景.png</file>
+        <file>material/bookkeeping/具体数目.png</file>
+        <file>material/bookkeeping/具体数目边框.png</file>
+        <file>material/bookkeeping/年.png</file>
+        <file>material/bookkeeping/日.png</file>
+        <file>material/bookkeeping/收入文字.png</file>
+        <file>material/bookkeeping/收支类型 .png</file>
+        <file>material/bookkeeping/竖线.png</file>
+        <file>material/bookkeeping/圆角矩形 1.png</file>
+        <file>material/bookkeeping/月.png</file>
+        <file>material/bookkeeping/账目类别.png</file>
+        <file>material/bookkeeping/支出文字.png</file>
+    </qresource>
+</RCC>

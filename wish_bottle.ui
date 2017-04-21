@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QFrame" name="wish_1">
    <property name="geometry">
     <rect>
@@ -21,6 +24,9 @@
      <width>210</width>
      <height>390</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(249, 250, 252);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -66,7 +72,8 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/stars.png);</string>
+      <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/stars.png);
+background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
       <string/>
@@ -208,6 +215,9 @@ background-color: rgb(
      <height>390</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(249, 250, 252);</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
    </property>
@@ -268,6 +278,9 @@ background-color: rgb(
      <width>210</width>
      <height>390</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(249, 250, 252);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>

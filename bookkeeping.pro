@@ -46,4 +46,5 @@ FORMS    += bookkeeping.ui \
     wish_bottle.ui
 
 RESOURCES += \
-    resource.qrc
+    resource.qrc \
+    wan.qrc
