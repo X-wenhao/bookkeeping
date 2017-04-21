@@ -60,7 +60,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);</string>
+     <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/待存储.png);</string>
     </property>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
@@ -250,8 +250,26 @@ background-color: rgb(
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);</string>
+     <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/待存储.png);</string>
     </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>170</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/stars.png);
+background-color: rgba(255, 255, 255, 0);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="wish_2_fill">
     <property name="geometry">
@@ -316,6 +334,24 @@ background-color: rgb(
     <property name="styleSheet">
      <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/待存储.png);</string>
     </property>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>170</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(:/WishBottle/material/wish_bottle/stars.png);
+background-color: rgba(255, 255, 255, 0);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="wish_3_fill">
     <property name="geometry">
@@ -417,6 +453,15 @@ background-color: rgb(
     <string/>
    </property>
   </widget>
+  <zorder>wish_1</zorder>
+  <zorder>wish_1_content</zorder>
+  <zorder>wish_2_content</zorder>
+  <zorder>wish_2</zorder>
+  <zorder>wish_3</zorder>
+  <zorder>wish_3_content</zorder>
+  <zorder>add_wish</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>

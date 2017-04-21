@@ -36,7 +36,7 @@ bookkeeping::bookkeeping(QWidget *parent) :
         }
     }
     ui->cost->setText(QString::number(-cost,10));
-    ui->cost_2->setText(QString::number(-cost,10));
+    //ui->cost_2->setText(QString::number(-cost,10));
     ui->income->setText(QString::number(income,10));
 
     //设置下拉菜单
