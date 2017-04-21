@@ -143,20 +143,28 @@ void wish_bottle::set_info()
     {
         QLabel *label;
         QTextBrowser *browser;
+        QLabel *label_back;
+        QLabel *label_in;
         switch(i)
         {
             case 1:
                 label=ui->wish_1_percent;
                 browser=ui->textBrowser;
+                label_back=ui->widget_1;
+                label_in=ui->label_2;
                 break;
             case 2:
             label=ui->wish_2_percent;
             browser=ui->textBrowser_2;
+            label_back=ui->widget_2;
+            label_in=ui->label_6;
             break;
             case 3:
             label=ui->wish_3_percent;
             browser=ui->textBrowser_3;
-                break;
+            label_back=ui->widget_3;
+            label_in=ui->label_7;
+            break;
         }
         //painter1(ui->wish_1);
         if(query.next())
@@ -168,6 +176,22 @@ void wish_bottle::set_info()
                 int percent=int(double(surplus)/money*100);
                 label->setText(QString::number(percent,10)+"%");
                 browser->setPlainText(query.record().value("wish").toString());
+
+                label_back->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);");
+                label_in->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/stars.png);"
+                                        "background-color: rgba(255, 255, 255, 0);");
+                int x=label_in->x();
+                int y=label_in->y();
+                int width=label_in->width();
+                int height=label_in->height();
+                y-=(1-double(surplus)/money)*height;
+                height*=double(surplus)/money;
+
+                label_in->setGeometry(x,y,height,width);
+                if(label_in->isHidden())
+                {
+                    label_in->show();
+                }
                 surplus=0;
             }
             else
@@ -175,13 +199,27 @@ void wish_bottle::set_info()
                 int percent=int(double(surplus)/money*100);
                 label->setText(QString::number(percent,10)+"%");
                 browser->setPlainText(query.record().value("wish").toString());
+                label_back->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);");
+                label_in->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/stars.png);"
+                                        "background-color: rgba(255, 255, 255, 0);");
+                if(label_in->isHidden())
+                {
+                    label_in->show();
+                }
+
                 surplus-=money;
             }
 
         }
         else
         {
-            label->setText("0%");
+            label->setText(" ");
+
+            label_back->setStyleSheet("background-image: url(:/WishBottle/material/wish_bottle/瓶子.png);");
+            if(label_in->isVisible())
+            {
+                label_in->hide();
+            }
         }
     }
 }
@@ -190,3 +228,4 @@ wish_bottle::~wish_bottle()
 {
     delete ui;
 }
+v
