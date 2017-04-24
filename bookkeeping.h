@@ -44,6 +44,10 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::bookkeeping *ui;
     QButtonGroup write_type_group;
@@ -54,6 +58,7 @@ private:
     void set_validator();
     void init_widget_show_cost(int status);
     void init_button_group();
+    void init_info();
 };
 
 #endif // BOOKKEEPING_H

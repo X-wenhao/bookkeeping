@@ -28,4 +28,8 @@ void cost::setinfo(QString type,QString reason,QString money)
     ui->cost_type->setText(type);
     //ui->cost_reason->setText(reason);
     ui->cost_money->setText(money);
+    QString set_icon="background-image: url(:/cost_icon/material/小图标/"
+            +type
+            +".png);";
+    ui->cost_icon->setStyleSheet(set_icon);
 }

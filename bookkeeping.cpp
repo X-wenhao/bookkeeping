@@ -7,7 +7,7 @@ bookkeeping::bookkeeping(QWidget *parent) :
 {
     ui->setupUi(this);
     set_validator();
-    //this->setWindowFlags(Qt::FramelessWindowHint);
+    this->setWindowFlags(Qt::FramelessWindowHint);
 
     //获取预算
     QSqlQuery query;
@@ -19,26 +19,6 @@ bookkeeping::bookkeeping(QWidget *parent) :
     //ui->showmoney->setText(QString::number(money,10));
     //ui->username->setText(username);
 
-    //获取收入与支出
-    query.exec("select * from cost");
-    int income=0;
-    int cost=0;
-    while(query.next())
-    {
-        int temp=query.record().value("money").toInt();
-        if(temp>0)
-        {
-            income+=temp;
-        }
-        else
-        {
-            cost+=temp;
-        }
-    }
-    ui->cost->setText(QString::number(-cost,10));
-    //ui->cost_2->setText(QString::number(-cost,10));
-    ui->income->setText(QString::number(income,10));
-
     //设置下拉菜单
     QDateTime time=QDateTime::currentDateTime();
     QString current_year=time.toString("yyyy");
@@ -49,6 +29,17 @@ bookkeeping::bookkeeping(QWidget *parent) :
     }
     ui->cob_year->setCurrentText(current_year);
     ui->cob_mon->setCurrentText(time.toString("M"));
+
+
+    //set budget
+    query.prepare("select * from analyze where time=:time");
+    query.bindValue(":time",ui->cob_year->currentText()+"-"+ui->cob_mon->currentText());
+    query.exec();
+    query.next();
+    int budget=query.record().value("budget").toInt();
+    int money1=-query.record().value("outcome").toInt();
+    ui->showmoney->setText(query.record().value("budget").toString());
+
 
     //设置滚动
     ui->scrollArea->setWidget(ui->widget_show_cost);
@@ -67,13 +58,10 @@ bookkeeping::bookkeeping(QWidget *parent) :
     page_3=new wish_bottle(ui->centralWidget);
     page_3->hide();
 
-    //set budget
-    query.prepare("select budget from analyze where time=:time");
-    query.bindValue(":time",ui->cob_year->currentText()+"-"+ui->cob_mon->currentText());
-    query.exec();
-    query.next();
-    ui->showmoney->setText(query.record().value("budget").toString());
 
+    ui->label_month->setText(ui->cob_mon->currentText());
+
+    init_info();
     init_button_group();
     init_widget_show_cost(0);
     ui->widget_show_cost->setStyleSheet("background-color: rgb(240, 241, 242)");
@@ -82,6 +70,33 @@ bookkeeping::bookkeeping(QWidget *parent) :
 bookkeeping::~bookkeeping()
 {
     delete ui;
+}
+
+void bookkeeping::init_info()
+{
+    QDateTime time=QDateTime::currentDateTime();
+    QString current_time=time.toString("yyyy")+"-"+time.toString("M");
+    QSqlQuery query;
+    query.prepare("select * from analyze where time=:time");
+    query.bindValue(":time",current_time);
+    query.exec();
+    int money=0;
+    int budget=1;
+    if(query.next())
+    {
+        money=-query.record().value("outcome").toInt();
+        budget=query.record().value("budget").toInt();
+    }
+    ui->label_money->setText("支出:"+QString::number(money,10)+"元");
+    if(money<budget)
+    {
+        int height=ui->widget_4->height();
+        int width=ui->widget_4->width();
+        height=double(money)/budget*height;
+        ui->widget_4->setGeometry(0,0,width,height);
+        ui->widget_4->show();
+    }
+    ui->cost->setText(QString::number(money,10));
 }
 
 void bookkeeping::on_editmoney_clicked()
@@ -289,6 +304,7 @@ void bookkeeping::on_back_to_page_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->page);
     init_widget_show_cost(1);
+    init_info();
 }
 
 void bookkeeping::set_validator()
@@ -350,6 +366,7 @@ void bookkeeping::init_button_group()
     write_kind_group.addButton(ui->radioButton_21);
     write_kind_group.addButton(ui->radioButton_22);
     write_kind_group.addButton(ui->radioButton_23);
+
 }
 
 void bookkeeping::on_pushButton_2_clicked()
@@ -357,29 +374,47 @@ void bookkeeping::on_pushButton_2_clicked()
     if(ui->stackedWidget->isVisibleTo(this))
     {
         ui->stackedWidget->hide();
+        ui->pushButton->setStyleSheet("border-image: url(:/border/material/board/我的账本-未选中.jpg);");
     }
     if(page_3->isVisibleTo(this))
     {
         page_3->hide();
+        ui->pushButton_3->setStyleSheet("border-image: url(:/border/material/board/心愿瓶-未选中.jpg);");
     }
     page_2->move(228,0);
+    page_2->update();
     page_2->show();
-
+    ui->pushButton_2->setStyleSheet("border-image: url(:/border/material/board/分析报表-选中.jpg);");
 }
 
 void bookkeeping::on_pushButton_clicked()
 {
     page_2->hide();
+    ui->pushButton_2->setStyleSheet("border-image: url(:/border/material/board/分析报表-未选中.jpg);");
     page_3->hide();
+    ui->pushButton_3->setStyleSheet("border-image: url(:/border/material/board/心愿瓶-未选中.jpg);");
 
     ui->stackedWidget->show();
+    ui->pushButton->setStyleSheet("border-image: url(:/border/material/board/我的账本-选中.jpg);");
 }
 
 void bookkeeping::on_pushButton_3_clicked()
 {
     ui->stackedWidget->hide();
+    ui->pushButton->setStyleSheet("border-image: url(:/border/material/board/我的账本-未选中.jpg);");
     page_2->hide();
-
+    ui->pushButton_2->setStyleSheet("border-image: url(:/border/material/board/分析报表-未选中.jpg);");
     page_3->show();
     page_3->move(228,0);
+    ui->pushButton_3->setStyleSheet("border-image: url(:/border/material/board/心愿瓶-选中.jpg);");
+}
+
+void bookkeeping::on_pushButton_5_clicked()
+{
+    exit(-1);
+}
+
+void bookkeeping::on_pushButton_4_clicked()
+{
+    exit(-1);
 }

@@ -5,7 +5,10 @@
 #include <QPainter>
 #include "database.h"
 #include <QPaintEvent>
-
+#include <QPalette>
+#include <QIntValidator>
+#include <QMessageBox>
+#include <QTextEdit>
 namespace Ui {
 class wish_bottle;
 }
@@ -21,9 +24,15 @@ public:
 protected:
     void paintEvent(QPaintEvent *event);
 
+private slots:
+    void on_pushButton_4_clicked();
+
+    void on_add_wish_clicked();
+
 private:
     Ui::wish_bottle *ui;
     void set_info();
+    QTextEdit *text;
 };
 
 #endif // WISH_BOTTLE_H

@@ -34,6 +34,9 @@ void analyze::paintEvent(QPaintEvent *event)
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
 
+    p.setBrush(QColor(255,255,255));
+    p.drawRect(0,0,792,768);
+
     QSqlQuery query;
     int data_pre[7][6]={0};
     int max_income=0;
@@ -127,7 +130,7 @@ void analyze::paintEvent(QPaintEvent *event)
     }
     for(int i=6;i>=0;i--)
     {
-        int total=data_pre[i][1]/max_outcome*(height-60);
+        int total=double(data_pre[i][1])/max_outcome*(height-100);
         qDebug()<<"total:"<<total;
         if(data_pre[i][1]!=0)
         {
@@ -230,7 +233,7 @@ void analyze::init_labels(int status)
 
 
         temp1->setText(QString::number(data_pre[i][j],10));
-        temp1->move(50+60*i,height-80-data_pre[i][j]/max*(height-100));
+        temp1->move(50+60*i,height-80-double(data_pre[i][j])/max*(height-100));
         temp1->show();
 
         int month=ui->two_month->currentText().toInt()-6+i;
@@ -285,6 +288,15 @@ void analyze::init_labels(int status)
 
 void analyze::on_two_exchange_status_clicked()
 {
+    if(ui->two_exchange_status->isChecked())
+    {
+        ui->two_exchange_status->setText("切换支出状态");
+    }
     update();
     init_labels(1);
+}
+
+void analyze::on_pushButton_4_clicked()
+{
+    exit(-1);
 }

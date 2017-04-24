@@ -61,7 +61,6 @@
         <file>material/小图标/彩票.png</file>
         <file>material/小图标/餐饮.png</file>
         <file>material/小图标/出行.png</file>
-        <file>material/小图标/电话.png</file>
         <file>material/小图标/服装.png</file>
         <file>material/小图标/购物.png</file>
         <file>material/小图标/健身.png</file>
@@ -78,6 +77,7 @@
         <file>material/小图标/学习.png</file>
         <file>material/小图标/医疗.png</file>
         <file>material/小图标/游戏.png</file>
+        <file>material/小图标/话费.png</file>
     </qresource>
     <qresource prefix="/WishBottle">
         <file>material/wish_bottle/待存储.png</file>
@@ -91,5 +91,9 @@
         <file>material/board/我的账本-选中.jpg</file>
         <file>material/board/心愿瓶-未选中.jpg</file>
         <file>material/board/心愿瓶-选中.jpg</file>
+    </qresource>
+    <qresource prefix="/test">
+        <file>material/2.png</file>
+        <file>material/图层 0.png</file>
     </qresource>
 </RCC>
