@@ -73,7 +73,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/page/material/支出/图层 1.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
@@ -84,9 +84,14 @@
      <rect>
       <x>50</x>
       <y>20</y>
-      <width>115</width>
+      <width>131</width>
       <height>19</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+color: rgb(152, 152, 152);
+font: 10pt &quot;华文行楷&quot;;</string>
     </property>
     <property name="text">
      <string>切换收入状态</string>

@@ -17,6 +17,7 @@ analyze::analyze(QWidget *parent) :
     }
     ui->two_year->setCurrentText(current_year);
     ui->two_month->setCurrentText(time.toString("M"));
+    ui->two_icon_exchange->setStyleSheet("background-image: url(:/page/material/支出/图层 1.png);");
 
     init_labels(0);
 }
@@ -91,6 +92,7 @@ void analyze::paintEvent(QPaintEvent *event)
     {
         j=0;
         max=max_income;
+        painter.setPen(QColor(229,174,143));
     }
     for(int i=0;i<6;i++)
     {
@@ -124,8 +126,8 @@ void analyze::paintEvent(QPaintEvent *event)
                 begin=360*16*double(data_pre[6][i])/data_pre[6][1];
                 qDebug()<<begin;
             }
-            painter.drawPie(90,y+30,150,150,begin,360*16*double(data_pre[6][i+1])/data_pre[6][1]);
-            painter.drawPie(30,y+40*i,20,20,0,360*16);
+            painter.drawPie(90+30,y+30,150,150,begin,360*16*double(data_pre[6][i+1])/data_pre[6][1]);
+            painter.drawPie(30+30,y+40*i,20,20,0,360*16);
         }
     }
     for(int i=6;i>=0;i--)
@@ -234,6 +236,8 @@ void analyze::init_labels(int status)
 
         temp1->setText(QString::number(data_pre[i][j],10));
         temp1->move(50+60*i,height-80-double(data_pre[i][j])/max*(height-100));
+        temp1->setStyleSheet("font: 7pt Castellar;"
+                             "color:rgb(105,111,113);");
         temp1->show();
 
         int month=ui->two_month->currentText().toInt()-6+i;
@@ -243,6 +247,8 @@ void analyze::init_labels(int status)
         }
         temp2->setText(QString::number(month,10));
         temp2->move(50+60*i,height-55);
+        temp2->setStyleSheet("font: 9pt Castellar;"
+                             "color:rgb(105,111,113)");
         temp2->show();
     }
 
@@ -260,6 +266,8 @@ void analyze::init_labels(int status)
         }
         temp3->setText(QString::number(month,10));
         temp3->move(275+60*i,height-80);
+        temp3->setStyleSheet("font: 9pt Castellar;"
+                             "color:rgb(105,111,113)");
         temp3->show();
     }
 
@@ -280,7 +288,9 @@ void analyze::init_labels(int status)
                 break;
         }
         temp->setText(content);
-        temp->move(15,40*i);
+        temp->move(15+30,40*i);
+        temp->setStyleSheet("font: 25 9pt '微软雅黑 Light' ;"
+                            "color:rgb(105,111,113)");
         temp->show();
     }
 
@@ -292,7 +302,9 @@ void analyze::on_two_exchange_status_clicked()
     {
         ui->two_exchange_status->setText("切换支出状态");
     }
+    ui->two_icon_exchange->setStyleSheet("background-image: url(:/page/material/支出/收入状态.png);");
     update();
+
     init_labels(1);
 }
 

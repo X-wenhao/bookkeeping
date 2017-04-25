@@ -60,11 +60,22 @@ bookkeeping::bookkeeping(QWidget *parent) :
 
 
     ui->label_month->setText(ui->cob_mon->currentText());
+    //setstyle
+    QGraphicsDropShadowEffect *shadow_effect = new QGraphicsDropShadowEffect(this);
+    shadow_effect->setOffset(0, 5);
+    shadow_effect->setColor(QColor(207,207,209));
+    shadow_effect->setBlurRadius(8);
+    ui->widget_2->setGraphicsEffect(shadow_effect);
+
+    ui->widget_show_cost->setWindowFlags(Qt::FramelessWindowHint| Qt::WindowStaysOnTopHint);//无边框??
+    //ui->widget_show_cost->setAttribute(Qt::WA_TranslucentBackground);
+    ui->widget_show_cost->setStyleSheet("border-color:rgb(240, 241, 242);");
+    ui->scrollArea->setStyleSheet("border-color:rgb(240, 241, 242);");
+    ui->scrollArea->setWindowFlags(Qt::FramelessWindowHint);
 
     init_info();
     init_button_group();
     init_widget_show_cost(0);
-    ui->widget_show_cost->setStyleSheet("background-color: rgb(240, 241, 242)");
 
 }
 bookkeeping::~bookkeeping()
@@ -92,7 +103,7 @@ void bookkeeping::init_info()
     {
         int height=ui->widget_4->height();
         int width=ui->widget_4->width();
-        height=double(money)/budget*height;
+        width=double(money)/budget*width;
         ui->widget_4->setGeometry(0,0,width,height);
         ui->widget_4->show();
     }
@@ -261,28 +272,19 @@ void bookkeeping::init_widget_show_cost(int status)
                 //ui->verticalLayout->addWidget(cost1);
                 cost1->move(0,y);
                 y+=cost1->height();
-                int tempmoney=query.record().value("money").toInt();
-                if(tempmoney<0)
+                int money=query.record().value("money").toInt();
+                if(money<0)
                 {
-                    sum_money+=tempmoney;
+                    sum_money+=money;
                 }
                 QString type=query.record().value("type").toString();
                 QString reason=query.record().value("reason").toString();
-                QString money=query.record().value("money").toString();
-                if(money.toInt()<0)
-                {
-                    money="支出："+money+"元";
-                }
-                else
-                {
-                    money="收入："+money+"元";
-                }
                 cost1->setinfo(type,reason,money);
                 cost1->show();
             }while(query.next());
             QString month=ui->cob_mon->currentText()+"月"+QString::number(i,10)+"日";
             QString week="星期一";
-            QString money="支出："+QString::number(sum_money,10);
+            QString money="支出:"+QString::number(-sum_money,10);
             cost_time1->setinfo(month,week,money);
         }
     }

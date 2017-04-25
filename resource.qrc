@@ -32,6 +32,7 @@
         <file>material/主页/修改2.png</file>
         <file>material/支出/图层 1.png</file>
         <file>material/page/横幅外(647.5.png</file>
+        <file>material/支出/收入状态.png</file>
     </qresource>
     <qresource prefix="/wish_bottle">
         <file>material/心愿/瓶子.png</file>
@@ -49,7 +50,6 @@
         <file>material/支出/背景1.png</file>
         <file>material/支出/饼状图修改.png</file>
         <file>material/支出/前标1.png</file>
-        <file>material/支出/切换收入状态 .png</file>
         <file>material/支出/收支分析图 .png</file>
         <file>material/支出/月度对比图 .png</file>
         <file>material/支出/月度对比图修改.png</file>

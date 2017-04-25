@@ -10,6 +10,7 @@
 #include <QButtonGroup>
 #include "analyze.h"
 #include "wish_bottle.h"
+#include <QGraphicsDropShadowEffect>
 
 namespace Ui {
 class bookkeeping;

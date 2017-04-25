@@ -229,6 +229,16 @@ void wish_bottle::set_info()
                     ui->textBrowser_3->show();
                 }
 
+                if(surplus!=0)
+                {
+                    label->setStyleSheet("font: 15pt Castellar;"
+                                         "color:rgb(87,144,187)");
+                }
+                else
+                {
+                    label->setStyleSheet("font: 15pt Castellar;"
+                                         "color:rgb(33,72,102)");
+                }
                 surplus=0;
 
             }
@@ -256,7 +266,8 @@ void wish_bottle::set_info()
 
                     ui->textBrowser_3->show();
                 }
-
+                label->setStyleSheet("font: 15pt Castellar;"
+                                     "color:rgb(87,144,187)");
 
             }
 

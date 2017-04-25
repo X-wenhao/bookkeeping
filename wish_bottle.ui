@@ -90,7 +90,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">border-image: url(:/wish_bottle/material/心愿/进度2.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -141,7 +141,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;FZYiHei-M20S&quot;;
+     <string notr="true">font: 12pt &quot;幼圆&quot;;
 border-image: null;
 background-color: rgba(
 240,241,242,0);</string>
@@ -150,8 +150,8 @@ background-color: rgba(
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'FZYiHei-M20S'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;小可爱留下了一个没有小姐姐的文本框。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'幼圆'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'FZYiHei-M20S'; font-size:13pt;&quot;&gt;小可爱留下了一个没有小姐姐的文本框。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -199,7 +199,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;FZYiHei-M20S&quot;;
+     <string notr="true">font: 12pt &quot;幼圆&quot;;
 border-image: null;
 background-color: rgba(
 240,241,242,0);</string>
@@ -425,7 +425,7 @@ background-color: rgba(
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;FZYiHei-M20S&quot;;
+     <string notr="true">font: 12pt &quot;幼圆&quot;;
 border-image: null;
 background-color: rgba(
 240,241,242,0);</string>
@@ -434,14 +434,15 @@ background-color: rgba(
    <widget class="QLabel" name="w3_label_money">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>70</x>
       <y>240</y>
-      <width>61</width>
+      <width>41</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">border-image: null;
+font: 25 9pt &quot;微软雅黑 Light&quot;;
 background-color: rgba(
 240,241,242,0);</string>
     </property>
@@ -452,16 +453,24 @@ background-color: rgba(
    <widget class="QLineEdit" name="w3_lineEdit">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>240</y>
-      <width>113</width>
+      <x>120</x>
+      <y>247</y>
+      <width>71</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">border-image: null;
 background-color: rgba(
-240,241,242,0);</string>
+240,241,242,0);
+font: 25 9pt &quot;微软雅黑 Light&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>1000000</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
   </widget>

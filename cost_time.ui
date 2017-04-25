@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>820</width>
+    <width>801</width>
     <height>25</height>
    </rect>
   </property>
@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+    <string notr="true">font: 7pt &quot;Adobe 黑体 Std R&quot;;</string>
    </property>
    <property name="text">
     <string>4月20日  星期</string>
@@ -35,18 +35,20 @@
   <widget class="QLabel" name="cost_time_money">
    <property name="geometry">
     <rect>
-     <x>670</x>
+     <x>630</x>
      <y>2</y>
-     <width>121</width>
+     <width>160</width>
      <height>22</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-font: 13pt &quot;FZYiHei-M20S&quot;;</string>
+    <string notr="true">font: 7pt &quot;Adobe 黑体 Std R&quot;;</string>
    </property>
    <property name="text">
     <string>支出：XX</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
  </widget>
